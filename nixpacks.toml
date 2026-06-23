@@ -1,5 +1,0 @@
-[php]
-version = "8.4"
-
-[phpextensions]
-extensions = ["pdo", "sqlite3", "pdo_sqlite", "mbstring", "xml", "curl", "gd", "bcmath", "json", "openssl", "tokenizer", "fileinfo"]
