@@ -10,8 +10,10 @@ WORKDIR /app
 COPY . .
 
 RUN composer install --no-dev --optimize-autoloader --no-interaction \
-    && npm ci && npm run build
+    && npm ci && npm run build \
+    && chmod -R 777 storage bootstrap/cache \
+    && touch database/database.sqlite
 
 EXPOSE $PORT
 
-CMD php artisan serve --host=0.0.0.0 --port=$PORT
+CMD php artisan migrate --force && php artisan serve --host=0.0.0.0 --port=$PORT
