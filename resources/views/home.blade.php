@@ -18,9 +18,9 @@
                 Realisatie van WebDevelopement - met onderhoud, aanpassingen, optimalisatie en bugfixing.
             </p>
             <div class="mt-16 max-w-2xl">
-                <h2 class="text-lg md:text-2xl font-semibold tracking-tight mb-4">Over Flux Dev</h2>
+                <h2 class="text-lg md:text-2xl font-semibold tracking-tight mb-4">Over Flex Dev</h2>
                 <p class="text-base opacity-50 leading-relaxed">
-                    Flux Dev staat voor de ontwikkeling en optimalisatie van webapplicaties en websites. Van het bouwen van maatwerk-platforms tot het doorvoeren van gerichte aanpassingen en het oplossen van complexe technische vraagstukken — elk project wordt uitgevoerd met oog voor kwaliteit, performantie en gebruiksgemak. Mijn aanpak is gestructureerd, transparant en gericht op een duurzaam resultaat.
+                    Flex Dev staat voor de ontwikkeling en optimalisatie van webapplicaties en websites. Van het bouwen van maatwerk-platforms tot het doorvoeren van gerichte aanpassingen en het oplossen van complexe technische vraagstukken — elk project wordt uitgevoerd met oog voor kwaliteit, performantie en gebruiksgemak. Mijn aanpak is gestructureerd, transparant en gericht op een duurzaam resultaat.
                 </p>
             </div>
             <div class="mt-20 max-w-3xl">

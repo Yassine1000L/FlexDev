@@ -1,4 +1,4 @@
-# Flux Dev
+# Flex Dev
 
 ## Lokaal draaien
 

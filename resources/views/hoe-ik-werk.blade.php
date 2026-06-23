@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Hoe ik werk | Flux Dev')
+@section('title', 'Hoe ik werk | Flex Dev')
 
 @section('content')
     <section class="min-h-screen flex flex-col justify-center px-6 pt-28">

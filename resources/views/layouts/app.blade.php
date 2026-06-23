@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-    <title>@yield('title', 'Flux Dev | Developer')</title>
+    <title>@yield('title', 'Flex Dev | Developer')</title>
 
     @php
         $manifest = json_decode(file_get_contents(public_path('build/manifest.json')), true);
@@ -28,7 +28,7 @@
                 <rect width="32" height="32" rx="6" fill="#a3a3a3"/>
                 <text x="16" y="22" text-anchor="middle" fill="black" font-family="system-ui" font-weight="700" font-size="18">F</text>
             </svg>
-            <span class="hidden sm:inline">Flux Dev</span>
+            <span class="hidden sm:inline">Flex Dev</span>
         </a>
         <div class="flex items-center gap-3 md:gap-8">
             @php $links = [['route' => 'diensten', 'label' => 'Diensten'], ['route' => 'hoe-ik-werk', 'label' => 'Werkwijze'], ['route' => 'projecten', 'label' => 'Projecten'], ['route' => 'contact', 'label' => 'Contact']]; @endphp
@@ -47,7 +47,7 @@
     </main>
 
     <footer class="py-12 text-center">
-        <p class="text-sm opacity-30">&copy; {{ date('Y') }} Flux Dev. Alle rechten voorbehouden.</p>
+        <p class="text-sm opacity-30">&copy; {{ date('Y') }} Flex Dev. Alle rechten voorbehouden.</p>
     </footer>
 
     <button id="backToTop" class="fixed bottom-8 right-8 z-50 w-10 h-10 rounded-full border border-white/20 bg-black/60 backdrop-blur-md flex items-center justify-center opacity-0 translate-y-4 pointer-events-none transition-all duration-300 hover:border-white/40 hover:bg-black/80">
