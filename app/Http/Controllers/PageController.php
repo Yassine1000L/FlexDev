@@ -1,0 +1,68 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use App\Models\ContactMessage;
+use Illuminate\Http\Request;
+
+class PageController extends Controller
+{
+    public function home()
+    {
+        return view('home');
+    }
+
+    public function diensten()
+    {
+        return view('diensten');
+    }
+
+    public function projecten()
+    {
+        return view('projecten');
+    }
+
+    public function contact()
+    {
+        return view('contact');
+    }
+
+    public function hoeIkWerk()
+    {
+        return view('hoe-ik-werk');
+    }
+
+    public function admin($secret = null)
+    {
+        $expected = trim(env('ADMIN_SECRET'), '/');
+        $given = trim((string) $secret, '/');
+
+        if (!$given || $given !== $expected) {
+            abort(404);
+        }
+
+        $messages = ContactMessage::latest()->get();
+        return view('admin', compact('messages'));
+    }
+
+    public function contactStore(Request $request)
+    {
+        $data = $request->validate([
+            'service' => 'required|string|max:255',
+            'details' => 'nullable|json',
+            'name' => 'required|string|max:255',
+            'email' => 'required|email|max:255',
+            'phone' => 'nullable|string|max:20',
+            'company' => 'nullable|string|max:255',
+            'preference' => 'nullable|string|max:50',
+            'message' => 'nullable|string|max:5000',
+        ]);
+
+        $data['message'] = $data['message'] ?? '';
+        $data['details'] = $data['details'] ? json_decode($data['details'], true) : null;
+
+        ContactMessage::create($data);
+
+        return back()->with('success', 'Bedankt voor uw bericht! Ik heb uw aanvraag goed ontvangen en neem binnen de 24 uur contact met u op.');
+    }
+}
