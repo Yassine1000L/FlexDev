@@ -9,8 +9,8 @@
             <h2 class="text-3xl md:text-6xl font-bold tracking-tight mb-12 md:mb-20">Projecten</h2>
 
             <div class="grid md:grid-cols-2 gap-6">
-                <div class="rounded-2xl overflow-hidden border border-white/5 hover:border-white/20 hover:-translate-y-1 hover:shadow-xl hover:shadow-white/5 transition-all duration-300 cursor-pointer">
-                    <div class="aspect-[4/3] bg-gradient-to-br from-white/5 to-white/[0.02] flex items-center justify-center">
+                <div class="rounded-2xl overflow-hidden border border-white/10 shadow-lg shadow-white/5 hover:border-white/30 hover:scale-[1.02] hover:shadow-2xl hover:shadow-white/10 transition-all duration-300 cursor-pointer">
+                    <div class="aspect-[4/3] bg-gradient-to-br from-white/[0.06] to-white/[0.01] flex items-center justify-center">
                         <span class="opacity-20 text-sm">Binnenkort</span>
                     </div>
                     <div class="p-5">
@@ -22,8 +22,8 @@
                     </div>
                 </div>
 
-                <div class="rounded-2xl overflow-hidden border border-white/5 hover:border-white/20 hover:-translate-y-1 hover:shadow-xl hover:shadow-white/5 transition-all duration-300 cursor-pointer">
-                    <div class="aspect-[4/3] bg-gradient-to-br from-white/5 to-white/[0.02] flex items-center justify-center">
+                <div class="rounded-2xl overflow-hidden border border-white/10 shadow-lg shadow-white/5 hover:border-white/30 hover:scale-[1.02] hover:shadow-2xl hover:shadow-white/10 transition-all duration-300 cursor-pointer">
+                    <div class="aspect-[4/3] bg-gradient-to-br from-white/[0.06] to-white/[0.01] flex items-center justify-center">
                         <span class="opacity-20 text-sm">Binnenkort</span>
                     </div>
                     <div class="p-5">
@@ -35,8 +35,8 @@
                     </div>
                 </div>
 
-                <div class="rounded-2xl overflow-hidden border border-white/5 hover:border-white/20 hover:-translate-y-1 hover:shadow-xl hover:shadow-white/5 transition-all duration-300 cursor-pointer">
-                    <div class="aspect-[4/3] bg-gradient-to-br from-white/5 to-white/[0.02] flex items-center justify-center">
+                <div class="rounded-2xl overflow-hidden border border-white/10 shadow-lg shadow-white/5 hover:border-white/30 hover:scale-[1.02] hover:shadow-2xl hover:shadow-white/10 transition-all duration-300 cursor-pointer">
+                    <div class="aspect-[4/3] bg-gradient-to-br from-white/[0.06] to-white/[0.01] flex items-center justify-center">
                         <span class="opacity-20 text-sm">Binnenkort</span>
                     </div>
                     <div class="p-5">
@@ -48,8 +48,8 @@
                     </div>
                 </div>
 
-                <div class="rounded-2xl overflow-hidden border border-white/5 hover:border-white/20 hover:-translate-y-1 hover:shadow-xl hover:shadow-white/5 transition-all duration-300 cursor-pointer">
-                    <div class="aspect-[4/3] bg-gradient-to-br from-white/5 to-white/[0.02] flex items-center justify-center">
+                <div class="rounded-2xl overflow-hidden border border-white/10 shadow-lg shadow-white/5 hover:border-white/30 hover:scale-[1.02] hover:shadow-2xl hover:shadow-white/10 transition-all duration-300 cursor-pointer">
+                    <div class="aspect-[4/3] bg-gradient-to-br from-white/[0.06] to-white/[0.01] flex items-center justify-center">
                         <span class="opacity-20 text-sm">Binnenkort</span>
                     </div>
                     <div class="p-5">
