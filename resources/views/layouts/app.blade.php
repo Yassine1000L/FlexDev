@@ -44,18 +44,7 @@
             <span class="hidden sm:block text-sm font-semibold tracking-tight text-slate-100">Flex Dev</span>
         </a>
 
-        <div class="flex items-center gap-0.5 md:gap-1.5">
-            @php $locale = request()->cookie('locale', 'nl'); @endphp
-            <a href="{{ route('taal', 'en') }}" class="text-[10px] md:text-xs font-medium px-1 md:px-2 py-1 rounded transition-colors {{ $locale === 'en' ? 'text-blue-400 bg-blue-500/10' : 'text-slate-500 hover:text-slate-300' }}">EN</a>
-            <span class="text-[8px] md:text-[10px] text-slate-700">|</span>
-            <a href="{{ route('taal', 'nl') }}" class="text-[10px] md:text-xs font-medium px-1 md:px-2 py-1 rounded transition-colors {{ $locale === 'nl' ? 'text-blue-400 bg-blue-500/10' : 'text-slate-500 hover:text-slate-300' }}">NL</a>
-            <span class="text-[8px] md:text-[10px] text-slate-700">|</span>
-            <a href="{{ route('taal', 'fr') }}" class="text-[10px] md:text-xs font-medium px-1 md:px-2 py-1 rounded transition-colors {{ $locale === 'fr' ? 'text-blue-400 bg-blue-500/10' : 'text-slate-500 hover:text-slate-300' }}">FR</a>
-        </div>
-
-        <div class="flex items-center gap-1 md:gap-2">
-        </a>
-
+        
         <div class="flex items-center gap-1 md:gap-2">
             @php $links = [['route' => 'diensten', 'label' => __('Diensten')], ['route' => 'hoe-ik-werk', 'label' => __('Werkwijze')], ['route' => 'projecten', 'label' => __('Projecten')], ['route' => 'contact', 'label' => __('Contact')]]; @endphp
             @foreach ($links as $link)
@@ -70,6 +59,15 @@
 
         </div>
     </nav>
+
+    @php $locale = request()->cookie('locale', 'nl'); @endphp
+    <div class="fixed top-[76px] right-4 md:right-10 z-50 flex items-center gap-1 px-2.5 py-1.5 rounded-full bg-slate-900/60 backdrop-blur-md border border-white/5 shadow-lg">
+        <a href="{{ route('taal', 'en') }}" class="text-[11px] font-medium px-2 py-0.5 rounded-full transition-colors {{ $locale === 'en' ? 'text-white bg-blue-500/20' : 'text-slate-500 hover:text-slate-300' }}">EN</a>
+        <span class="text-[8px] text-slate-700">|</span>
+        <a href="{{ route('taal', 'nl') }}" class="text-[11px] font-medium px-2 py-0.5 rounded-full transition-colors {{ $locale === 'nl' ? 'text-white bg-blue-500/20' : 'text-slate-500 hover:text-slate-300' }}">NL</a>
+        <span class="text-[8px] text-slate-700">|</span>
+        <a href="{{ route('taal', 'fr') }}" class="text-[11px] font-medium px-2 py-0.5 rounded-full transition-colors {{ $locale === 'fr' ? 'text-white bg-blue-500/20' : 'text-slate-500 hover:text-slate-300' }}">FR</a>
+    </div>
 
     <main>
         @yield('content')
