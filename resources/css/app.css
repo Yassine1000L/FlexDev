@@ -13,5 +13,29 @@ html {
 }
 
 ::selection {
-    background: rgba(255, 255, 255, 0.15);
+    background: rgba(59, 130, 246, 0.3);
+}
+
+/* Mouse glow */
+.mouse-glow {
+    position: fixed;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(59,130,246,0.08) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 9999;
+    transition: opacity 0.3s;
+}
+
+/* Scroll animations */
+.animate {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+
+.animate.animate-visible {
+    opacity: 1;
+    transform: translateY(0);
 }
