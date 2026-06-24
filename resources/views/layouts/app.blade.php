@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-    <title>@yield('title', 'Flex Dev | Developer')</title>
+    <title>@yield('title', __('Flex Dev | Developer'))</title>
 
     @php
         $manifest = json_decode(file_get_contents(public_path('build/manifest.json')), true);
@@ -40,8 +40,17 @@
             <span class="hidden sm:block text-sm font-semibold tracking-tight text-slate-100">Flex Dev</span>
         </a>
 
+        <div class="flex items-center gap-2">
+            <a href="{{ route('taal', 'nl') }}" class="text-xs font-medium px-2 py-1 rounded transition-colors {{ session('locale', 'nl') === 'nl' ? 'text-blue-400 bg-blue-500/10' : 'text-slate-500 hover:text-slate-300' }}">NL</a>
+            <span class="text-slate-600 text-xs">|</span>
+            <a href="{{ route('taal', 'fr') }}" class="text-xs font-medium px-2 py-1 rounded transition-colors {{ session('locale') === 'fr' ? 'text-blue-400 bg-blue-500/10' : 'text-slate-500 hover:text-slate-300' }}">FR</a>
+        </div>
+
         <div class="flex items-center gap-1 md:gap-2">
-            @php $links = [['route' => 'diensten', 'label' => 'Diensten'], ['route' => 'hoe-ik-werk', 'label' => 'Werkwijze'], ['route' => 'projecten', 'label' => 'Projecten'], ['route' => 'contact', 'label' => 'Contact']]; @endphp
+        </a>
+
+        <div class="flex items-center gap-1 md:gap-2">
+            @php $links = [['route' => 'diensten', 'label' => __('Diensten')], ['route' => 'hoe-ik-werk', 'label' => __('Werkwijze')], ['route' => 'projecten', 'label' => __('Projecten')], ['route' => 'contact', 'label' => __('Contact')]]; @endphp
             @foreach ($links as $link)
                 @php $active = request()->routeIs($link['route']); @endphp
                 <a href="{{ route($link['route']) }}" class="relative px-3 md:px-4 py-2 text-xs md:text-sm font-medium rounded-lg transition-all duration-200 {{ $active ? 'text-white bg-white/10' : 'text-slate-400 hover:text-white hover:bg-white/5' }}">
@@ -60,7 +69,7 @@
     </main>
 
     <footer class="py-12 text-center">
-        <p class="text-sm text-slate-500">&copy; {{ date('Y') }} Flex Dev. Alle rechten voorbehouden.</p>
+        <p class="text-sm text-slate-500">&copy; {{ date('Y') }} Flex Dev. {{ __('Alle rechten voorbehouden.') }}</p>
     </footer>
 
     <button id="backToTop" class="fixed bottom-8 right-8 z-50 w-10 h-10 rounded-full border border-blue-500/30 bg-slate-950/60 backdrop-blur-md flex items-center justify-center opacity-0 translate-y-4 pointer-events-none transition-all duration-300 hover:border-blue-400/60 hover:bg-blue-950/80">

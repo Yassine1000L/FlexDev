@@ -18,5 +18,9 @@ class AppServiceProvider extends ServiceProvider
         if (!str_contains($host, '127.0.0.1') && !str_contains($host, 'localhost') && !str_contains($host, '.test')) {
             URL::forceScheme('https');
         }
+
+        if (session()->has('locale')) {
+            app()->setLocale(session('locale'));
+        }
     }
 }

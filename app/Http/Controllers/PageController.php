@@ -63,6 +63,6 @@ class PageController extends Controller
 
         ContactMessage::create($data);
 
-        return back()->with('success', 'Bedankt voor uw bericht! Ik heb uw aanvraag goed ontvangen en neem binnen de 24 uur contact met u op.');
+        return back()->with('success', __('Bedankt voor uw bericht! Ik heb uw aanvraag goed ontvangen en neem binnen de 24 uur contact met u op.'));
     }
 }

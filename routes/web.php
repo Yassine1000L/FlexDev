@@ -9,4 +9,11 @@ Route::get('projecten', [PageController::class, 'projecten'])->name('projecten')
 Route::get('contact', [PageController::class, 'contact'])->name('contact');
 Route::post('contact', [PageController::class, 'contactStore'])->name('contact.store');
 Route::get('hoe-ik-werk', [PageController::class, 'hoeIkWerk'])->name('hoe-ik-werk');
+Route::get('taal/{locale}', function ($locale) {
+    if (in_array($locale, ['nl', 'fr'])) {
+        session(['locale' => $locale]);
+        app()->setLocale($locale);
+    }
+    return redirect()->back();
+})->name('taal');
 Route::get('admin/{secret?}', [PageController::class, 'admin'])->name('admin');
