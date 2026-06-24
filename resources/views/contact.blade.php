@@ -11,13 +11,13 @@
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
                     </div>
                     <p class="text-lg font-medium mb-2">Bericht Ontvangen!</p>
-                    <p class="text-sm opacity-60 leading-relaxed max-w-md mx-auto">{{ session('success') }}</p>
-                    <a href="{{ route('home') }}" class="inline-flex items-center gap-2 px-6 py-3 mt-6 border border-white/20 text-sm font-medium rounded-full hover:border-white/40 hover:bg-white/5 transition-all">&larr; Terug naar home</a>
+                    <p class="text-sm text-slate-200 leading-relaxed max-w-md mx-auto">{{ session('success') }}</p>
+                    <a href="{{ route('home') }}" class="inline-flex items-center gap-2 px-6 py-3 mt-6 border border-blue-500/30 text-sm font-medium rounded-full hover:border-blue-400/60 hover:bg-blue-500/5 transition-all">&larr; Terug naar home</a>
                 </div>
             @else
-                <p class="text-sm opacity-40 mb-4 tracking-widest uppercase">Laten we Praten</p>
+                <p class="text-sm text-slate-400 mb-4 tracking-widest uppercase">Laten we Praten</p>
                 <h2 class="text-3xl md:text-6xl font-bold tracking-tight mb-4">Neem Contact Op</h2>
-                <p class="text-lg opacity-50 max-w-xl mb-12 leading-relaxed">
+                <p class="text-lg text-slate-300 max-w-xl mb-12 leading-relaxed">
                     Doorloop de stappen zodat ik precies weet wat je nodig hebt.
                 </p>
 
@@ -28,28 +28,28 @@
 
                 {{-- Step 1 --}}
                 <div class="step" data-step="1">
-                    <p class="text-xs opacity-30 mb-8">Stap 1 van 3</p>
+                    <p class="text-xs text-slate-500 mb-8">Stap 1 van 3</p>
                     <h3 class="text-2xl font-semibold mb-8">Waar kunnen we je mee helpen?</h3>
                     <div class="space-y-3">
-                        <button type="button" class="choice-btn w-full text-left px-6 py-4 rounded-xl border border-white/10 hover:border-white/40 bg-white/5 hover:bg-white/10 transition-all cursor-pointer border-l-[3px] border-l-transparent" data-value="Nieuw project">
+                        <button type="button" class="choice-btn w-full text-left px-6 py-4 rounded-xl border border-blue-500/10 hover:border-blue-400/40 bg-blue-500/5 hover:bg-blue-500/10 transition-all cursor-pointer border-l-[3px] border-l-transparent" data-value="Nieuw project">
                             <span class="font-medium">Ik wil een nieuw project starten</span>
-                            <p class="text-sm opacity-40 mt-1">Van concept tot oplevering — ik bouw jouw idee.</p>
+                            <p class="text-sm text-slate-400 mt-1">Van concept tot oplevering — ik bouw jouw idee.</p>
                         </button>
-                        <button type="button" class="choice-btn w-full text-left px-6 py-4 rounded-xl border border-white/10 hover:border-white/40 bg-white/5 hover:bg-white/10 transition-all cursor-pointer border-l-[3px] border-l-transparent" data-value="Aanpassing">
+                        <button type="button" class="choice-btn w-full text-left px-6 py-4 rounded-xl border border-blue-500/10 hover:border-blue-400/40 bg-blue-500/5 hover:bg-blue-500/10 transition-all cursor-pointer border-l-[3px] border-l-transparent" data-value="Aanpassing">
                             <span class="font-medium">Ik wil een bestaande website aanpassen of verbeteren</span>
-                            <p class="text-sm opacity-40 mt-1">Nieuwe functies, redesign of uitbreiding van je huidige site.</p>
+                            <p class="text-sm text-slate-400 mt-1">Nieuwe functies, redesign of uitbreiding van je huidige site.</p>
                         </button>
-                        <button type="button" class="choice-btn w-full text-left px-6 py-4 rounded-xl border border-white/10 hover:border-white/40 bg-white/5 hover:bg-white/10 transition-all cursor-pointer border-l-[3px] border-l-transparent" data-value="Bugfixing">
+                        <button type="button" class="choice-btn w-full text-left px-6 py-4 rounded-xl border border-blue-500/10 hover:border-blue-400/40 bg-blue-500/5 hover:bg-blue-500/10 transition-all cursor-pointer border-l-[3px] border-l-transparent" data-value="Bugfixing">
                             <span class="font-medium">Ik wil een bug laten oplossen</span>
-                            <p class="text-sm opacity-40 mt-1">Iets werkt niet naar behoren? Ik zoek het voor je uit.</p>
+                            <p class="text-sm text-slate-400 mt-1">Iets werkt niet naar behoren? Ik zoek het voor je uit.</p>
                         </button>
-                        <button type="button" class="choice-btn w-full text-left px-6 py-4 rounded-xl border border-white/10 hover:border-white/40 bg-white/5 hover:bg-white/10 transition-all cursor-pointer border-l-[3px] border-l-transparent" data-value="Optimalisatie">
+                        <button type="button" class="choice-btn w-full text-left px-6 py-4 rounded-xl border border-blue-500/10 hover:border-blue-400/40 bg-blue-500/5 hover:bg-blue-500/10 transition-all cursor-pointer border-l-[3px] border-l-transparent" data-value="Optimalisatie">
                             <span class="font-medium">Ik wil een bestaand project optimaliseren</span>
-                            <p class="text-sm opacity-40 mt-1">Snelheid, codekwaliteit of gebruikerservaring verbeteren.</p>
+                            <p class="text-sm text-slate-400 mt-1">Snelheid, codekwaliteit of gebruikerservaring verbeteren.</p>
                         </button>
-                        <button type="button" class="choice-btn w-full text-left px-6 py-4 rounded-xl border border-white/10 hover:border-white/40 bg-white/5 hover:bg-white/10 transition-all cursor-pointer border-l-[3px] border-l-transparent" data-value="Anders">
+                        <button type="button" class="choice-btn w-full text-left px-6 py-4 rounded-xl border border-blue-500/10 hover:border-blue-400/40 bg-blue-500/5 hover:bg-blue-500/10 transition-all cursor-pointer border-l-[3px] border-l-transparent" data-value="Anders">
                             <span class="font-medium">Anders</span>
-                            <p class="text-sm opacity-40 mt-1">Iets anders? Geef het aan in stap 3.</p>
+                            <p class="text-sm text-slate-400 mt-1">Iets anders? Geef het aan in stap 3.</p>
                         </button>
                     </div>
                     @error('service') <p class="text-red-400/70 text-xs mt-3">{{ $message }}</p> @enderror
@@ -57,7 +57,7 @@
 
                 {{-- Step 2 --}}
                 <div class="step hidden" data-step="2">
-                    <p class="text-xs opacity-30 mb-8">Stap 2 van 3</p>
+                    <p class="text-xs text-slate-500 mb-8">Stap 2 van 3</p>
                     <h3 class="text-2xl font-semibold mb-8">Nog een paar vragen</h3>
                     <p id="step2Error" class="hidden text-red-400/80 text-sm mb-6">Maak eerst een keuze</p>
 
@@ -147,13 +147,13 @@
 
                     {{-- Vragen voor Anders --}}
                     <div class="step-questions hidden" data-for="Anders">
-                        <p class="text-sm opacity-40">Geef in de volgende stap een toelichting van je vraag.</p>
+                        <p class="text-sm text-slate-400">Geef in de volgende stap een toelichting van je vraag.</p>
                     </div>
                 </div>
 
                 {{-- Step 3 --}}
                 <div class="step hidden" data-step="3">
-                    <p class="text-xs opacity-30 mb-8">Stap 3 van 3</p>
+                    <p class="text-xs text-slate-500 mb-8">Stap 3 van 3</p>
                     <h3 class="text-2xl font-semibold mb-8">Uw gegevens</h3>
                     <p id="step3Error" class="hidden text-red-400/80 text-sm mb-6">Maak eerst een keuze</p>
 
@@ -195,9 +195,9 @@
 
                 {{-- Navigation --}}
                 <div class="flex items-center justify-between mt-10">
-                    <button type="button" id="prevBtn" class="px-6 py-3 text-sm opacity-40 hover:opacity-70 transition-opacity hidden">&larr; Vorige</button>
-                    <button type="button" id="nextBtn" class="px-8 py-3 bg-white text-black text-sm font-medium rounded-full hover:bg-white/90 transition-all cursor-pointer">Volgende</button>
-                    <button type="submit" id="submitBtn" class="px-8 py-3 bg-white text-black text-sm font-medium rounded-full hover:bg-white/90 transition-all hidden cursor-pointer">Verstuur</button>
+                    <button type="button" id="prevBtn" class="px-6 py-3 text-sm text-slate-400 hover:opacity-70 transition-opacity hidden">&larr; Vorige</button>
+                    <button type="button" id="nextBtn" class="px-8 py-3 bg-blue-600 text-white text-sm font-medium rounded-full hover:bg-blue-500 transition-all cursor-pointer shadow-lg shadow-blue-500/20">Volgende</button>
+                    <button type="submit" id="submitBtn" class="px-8 py-3 bg-blue-600 text-white text-sm font-medium rounded-full hover:bg-blue-500 transition-all hidden cursor-pointer shadow-lg shadow-blue-500/20">Verstuur</button>
                 </div>
             </form>
 
@@ -226,11 +226,11 @@
         document.querySelectorAll('.choice-btn').forEach(btn => {
             btn.addEventListener('click', () => {
                 document.querySelectorAll('.choice-btn').forEach(b => {
-                    b.classList.remove('border-white/60', 'bg-white/15', 'selected');
-                    b.classList.add('border-white/10', 'bg-white/5');
+                    b.classList.remove('border-blue-400/60', 'bg-blue-500/15', 'selected');
+                    b.classList.add('border-blue-500/10', 'bg-blue-500/5');
                 });
-                btn.classList.remove('border-white/10', 'bg-white/5');
-                btn.classList.add('border-white/60', 'bg-white/15', 'selected');
+                btn.classList.remove('border-blue-500/10', 'bg-blue-500/5');
+                btn.classList.add('border-blue-400/60', 'bg-blue-500/15', 'selected');
                 document.getElementById('serviceInput').value = btn.dataset.value;
 
                 const service = btn.dataset.value;
@@ -313,7 +313,7 @@
 
     <style>
         .choice-btn.selected {
-            border-left-color: white !important;
+            border-left-color: #60a5fa !important;
             position: relative;
         }
         .choice-btn.selected::after {
@@ -321,7 +321,7 @@
             position: absolute;
             inset: 0;
             border-radius: 0.75rem;
-            box-shadow: 0 0 25px rgba(255,255,255,0.08);
+            box-shadow: 0 0 25px rgba(59,130,246,0.12);
             pointer-events: none;
         }
     </style>
