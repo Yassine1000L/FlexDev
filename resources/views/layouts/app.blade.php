@@ -40,9 +40,11 @@
             <span class="hidden sm:block text-sm font-semibold tracking-tight text-slate-100">Flex Dev</span>
         </a>
 
-        <div class="flex items-center gap-2">
-            <a href="{{ route('taal', 'nl') }}" class="text-xs font-medium px-2 py-1 rounded transition-colors {{ session('locale', 'nl') === 'nl' ? 'text-blue-400 bg-blue-500/10' : 'text-slate-500 hover:text-slate-300' }}">NL</a>
-            <span class="text-slate-600 text-xs">|</span>
+        <div class="flex items-center gap-1.5">
+            <a href="{{ route('taal', 'en') }}" class="text-xs font-medium px-2 py-1 rounded transition-colors {{ (session('locale', 'nl') === 'en') ? 'text-blue-400 bg-blue-500/10' : 'text-slate-500 hover:text-slate-300' }}">EN</a>
+            <span class="text-[10px] text-slate-700">|</span>
+            <a href="{{ route('taal', 'nl') }}" class="text-xs font-medium px-2 py-1 rounded transition-colors {{ (session('locale', 'nl') === 'nl') ? 'text-blue-400 bg-blue-500/10' : 'text-slate-500 hover:text-slate-300' }}">NL</a>
+            <span class="text-[10px] text-slate-700">|</span>
             <a href="{{ route('taal', 'fr') }}" class="text-xs font-medium px-2 py-1 rounded transition-colors {{ session('locale') === 'fr' ? 'text-blue-400 bg-blue-500/10' : 'text-slate-500 hover:text-slate-300' }}">FR</a>
         </div>
 

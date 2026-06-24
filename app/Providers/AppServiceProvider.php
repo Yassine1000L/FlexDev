@@ -19,8 +19,5 @@ class AppServiceProvider extends ServiceProvider
             URL::forceScheme('https');
         }
 
-        if (session()->has('locale')) {
-            app()->setLocale(session('locale'));
-        }
     }
 }

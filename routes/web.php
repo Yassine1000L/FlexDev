@@ -10,7 +10,7 @@ Route::get('contact', [PageController::class, 'contact'])->name('contact');
 Route::post('contact', [PageController::class, 'contactStore'])->name('contact.store');
 Route::get('hoe-ik-werk', [PageController::class, 'hoeIkWerk'])->name('hoe-ik-werk');
 Route::get('taal/{locale}', function ($locale) {
-    if (in_array($locale, ['nl', 'fr'])) {
+    if (in_array($locale, ['en', 'nl', 'fr'])) {
         session(['locale' => $locale]);
         app()->setLocale($locale);
     }
