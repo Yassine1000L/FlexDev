@@ -51,10 +51,7 @@
                     @endif
                 </a>
             @endforeach
-            <span class="hidden md:flex items-center gap-1.5 ml-2 pl-4 border-l border-white/10 text-[11px] text-green-400 font-medium">
-                <span class="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse"></span>
-                Beschikbaar
-            </span>
+
         </div>
     </nav>
 

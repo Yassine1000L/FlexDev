@@ -1,10 +1,12 @@
 import.meta.glob(['../images/**']);
 
-// Scroll animations
+// Scroll animations — elke keer opnieuw
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.classList.add('animate-visible');
+        } else {
+            entry.target.classList.remove('animate-visible');
         }
     });
 }, { threshold: 0.1 });
