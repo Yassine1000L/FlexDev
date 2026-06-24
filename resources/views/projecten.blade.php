@@ -15,7 +15,7 @@
                     </div>
                     <div class="p-5">
                         <h3 class="font-semibold text-base">Project 01</h3>
-                        <p class="text-sm text-slate-400 mt-1">{{ __('{{ __('Binnenkort') }} meer informatie over dit project.') }}</p>
+                        <p class="text-sm text-slate-400 mt-1">{{ __('Binnenkort meer informatie over dit project.') }}</p>
                         <div class="flex items-center gap-2 mt-3">
                             <span class="text-[10px] px-2 py-0.5 rounded-full bg-white/10">{{ __('Coming soon') }}</span>
                         </div>
@@ -28,7 +28,7 @@
                     </div>
                     <div class="p-5">
                         <h3 class="font-semibold text-base">Project 02</h3>
-                        <p class="text-sm text-slate-400 mt-1">{{ __('{{ __('Binnenkort') }} meer informatie over dit project.') }}</p>
+                        <p class="text-sm text-slate-400 mt-1">{{ __('Binnenkort meer informatie over dit project.') }}</p>
                         <div class="flex items-center gap-2 mt-3">
                             <span class="text-[10px] px-2 py-0.5 rounded-full bg-white/10">{{ __('Coming soon') }}</span>
                         </div>
@@ -41,7 +41,7 @@
                     </div>
                     <div class="p-5">
                         <h3 class="font-semibold text-base">Project 03</h3>
-                        <p class="text-sm text-slate-400 mt-1">{{ __('{{ __('Binnenkort') }} meer informatie over dit project.') }}</p>
+                        <p class="text-sm text-slate-400 mt-1">{{ __('Binnenkort meer informatie over dit project.') }}</p>
                         <div class="flex items-center gap-2 mt-3">
                             <span class="text-[10px] px-2 py-0.5 rounded-full bg-white/10">{{ __('Coming soon') }}</span>
                         </div>
@@ -54,7 +54,7 @@
                     </div>
                     <div class="p-5">
                         <h3 class="font-semibold text-base">Project 04</h3>
-                        <p class="text-sm text-slate-400 mt-1">{{ __('{{ __('Binnenkort') }} meer informatie over dit project.') }}</p>
+                        <p class="text-sm text-slate-400 mt-1">{{ __('Binnenkort meer informatie over dit project.') }}</p>
                         <div class="flex items-center gap-2 mt-3">
                             <span class="text-[10px] px-2 py-0.5 rounded-full bg-white/10">{{ __('Coming soon') }}</span>
                         </div>

@@ -11,7 +11,7 @@
             <div class="grid md:grid-cols-2 gap-12">
                 <div class="border-t border-blue-500/10 pt-8 rounded-xl p-6 hover:-translate-y-1 hover:shadow-[0_0_40px_rgba(59,130,246,0.15)] transition-all duration-300 animate">
                     <span class="text-3xl font-bold text-slate-600">01</span>
-                    <h3 class="text-2xl font-semibold mt-4">{{ __('Web{{ __('Ontwikkeling') }}') }}</h3>
+                    <h3 class="text-2xl font-semibold mt-4">{{ __('Webontwikkeling') }}</h3>
                     <p class="mt-3 text-slate-300 leading-relaxed">Moderne, responsive websites en webapplicaties bouwen.</p>
                 </div>
 
