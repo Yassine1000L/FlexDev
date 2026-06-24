@@ -39,7 +39,7 @@
                             <span class="font-medium">{{ __('Ik wil een bestaande website aanpassen of verbeteren') }}</span>
                             <p class="text-sm text-slate-400 mt-1">{{ __('Nieuwe functies, redesign of uitbreiding van je huidige site.') }}</p>
                         </button>
-                        <button type="button" class="choice-btn w-full text-left px-6 py-4 rounded-xl border border-blue-500/10 hover:border-blue-400/40 bg-blue-500/5 hover:bg-blue-500/10 transition-all cursor-pointer border-l-[3px] border-l-transparent" data-value="{{ __('Bugfixing') }}">
+                        <button type="button" class="choice-btn w-full text-left px-6 py-4 rounded-xl border border-blue-500/10 hover:border-blue-400/40 bg-blue-500/5 hover:bg-blue-500/10 transition-all cursor-pointer border-l-[3px] border-l-transparent" data-value="Bugfixing">
                             <span class="font-medium">{{ __('Ik wil een bug laten oplossen') }}</span>
                             <p class="text-sm text-slate-400 mt-1">{{ __('Iets werkt niet naar behoren? Ik zoek het voor je uit.') }}</p>
                         </button>
@@ -47,9 +47,9 @@
                             <span class="font-medium">{{ __('Ik wil een bestaand project optimaliseren') }}</span>
                             <p class="text-sm text-slate-400 mt-1">{{ __('Snelheid, codekwaliteit of gebruikerservaring verbeteren.') }}</p>
                         </button>
-                        <button type="button" class="choice-btn w-full text-left px-6 py-4 rounded-xl border border-blue-500/10 hover:border-blue-400/40 bg-blue-500/5 hover:bg-blue-500/10 transition-all cursor-pointer border-l-[3px] border-l-transparent" data-value="{{ __('Anders') }}">
+                        <button type="button" class="choice-btn w-full text-left px-6 py-4 rounded-xl border border-blue-500/10 hover:border-blue-400/40 bg-blue-500/5 hover:bg-blue-500/10 transition-all cursor-pointer border-l-[3px] border-l-transparent" data-value="Anders">
                             <span class="font-medium">{{ __('Anders') }}</span>
-                            <p class="text-sm text-slate-400 mt-1">Iets {{ __('Anders') }}? Geef het aan in stap 3.</p>
+                            <p class="text-sm text-slate-400 mt-1">{{ __('Iets anders? Geef het aan in stap 3.') }}</p>
                         </button>
                     </div>
                     @error('service') <p class="text-red-400/70 text-xs mt-3">{{ $message }}</p> @enderror
@@ -64,17 +64,17 @@
                     {{-- Vragen voor Nieuw project --}}
                     <div class="step-questions" data-for="Nieuw project">
                         <div class="mb-6">
-                            <label class="block text-sm opacity-60 mb-2">Wat voor project?</label>
+                            <label class="block text-sm opacity-60 mb-2">{{ __('Wat voor project?') }}</label>
                             <select name="q_project_type" class="detail-field w-full bg-transparent border-b border-white/20 py-3 text-sm outline-none focus:border-white/60 transition-colors">
                                 <option value="" class="bg-neutral-800" selected>{{ __('Maak een keuze') }}</option>
                                 <option value="Webshop" class="bg-neutral-800">Webshop</option>
                                 <option value="Website" class="bg-neutral-800">Website</option>
                                 <option value="Webapplicatie" class="bg-neutral-800">Webapplicatie</option>
-                                <option value="{{ __('Anders') }}" class="bg-neutral-800">{{ __('Anders') }}</option>
+                                <option value="Anders" class="bg-neutral-800">{{ __('Anders') }}</option>
                             </select>
                         </div>
                         <div class="mb-6">
-                            <label class="block text-sm opacity-60 mb-2">Heeft u al een ontwerp?</label>
+                            <label class="block text-sm opacity-60 mb-2">{{ __('Heeft u al een ontwerp?') }}</label>
                             <select name="q_design" class="detail-field w-full bg-transparent border-b border-white/20 py-3 text-sm outline-none focus:border-white/60 transition-colors">
                                 <option value="" class="bg-neutral-800" selected>{{ __('Maak een keuze') }}</option>
                                 <option value="Ja" class="bg-neutral-800">Ja</option>
@@ -87,17 +87,17 @@
                     {{-- Vragen voor Aanpassing --}}
                     <div class="step-questions hidden" data-for="Aanpassing">
                         <div class="mb-6">
-                            <label class="block text-sm opacity-60 mb-2">Wat moet er aangepast worden?</label>
+                            <label class="block text-sm opacity-60 mb-2">{{ __('Wat moet er aangepast worden?') }}</label>
                             <select name="q_what_change" class="detail-field w-full bg-transparent border-b border-white/20 py-3 text-sm outline-none focus:border-white/60 transition-colors">
                                 <option value="" class="bg-neutral-800" selected>{{ __('Maak een keuze') }}</option>
                                 <option value="Design" class="bg-neutral-800">Design / lay-out aanpassen</option>
                                 <option value="Functionaliteit" class="bg-neutral-800">Nieuwe functionaliteit toevoegen</option>
                                 <option value="Inhoud" class="bg-neutral-800">Inhoud / tekst aanpassen</option>
-                                <option value="{{ __('Anders') }}" class="bg-neutral-800">{{ __('Anders') }}</option>
+                                <option value="Anders" class="bg-neutral-800">{{ __('Anders') }}</option>
                             </select>
                         </div>
                         <div class="mb-6">
-                            <label class="block text-sm opacity-60 mb-2">Heeft u een bestaande site?</label>
+                            <label class="block text-sm opacity-60 mb-2">{{ __('Heeft u een bestaande site?') }}</label>
                             <select name="q_has_site" class="detail-field w-full bg-transparent border-b border-white/20 py-3 text-sm outline-none focus:border-white/60 transition-colors">
                                 <option value="" class="bg-neutral-800" selected>{{ __('Maak een keuze') }}</option>
                                 <option value="Ja" class="bg-neutral-800">Ja, die kan ik laten zien</option>
@@ -107,20 +107,20 @@
                         </div>
                     </div>
 
-                    {{-- Vragen voor {{ __('Bugfixing') }} --}}
-                    <div class="step-questions hidden" data-for="{{ __('Bugfixing') }}">
+                    {{-- Vragen voor Bugfixing --}}
+                    <div class="step-questions hidden" data-for="Bugfixing">
                         <div class="mb-6">
-                            <label class="block text-sm opacity-60 mb-2">Waar situeert het probleem zich?</label>
+                            <label class="block text-sm opacity-60 mb-2">{{ __('Waar situeert het probleem zich?') }}</label>
                             <select name="q_bug_location" class="detail-field w-full bg-transparent border-b border-white/20 py-3 text-sm outline-none focus:border-white/60 transition-colors">
                                 <option value="" class="bg-neutral-800" selected>{{ __('Maak een keuze') }}</option>
                                 <option value="Front-end" class="bg-neutral-800">Front-end (weergave / design)</option>
                                 <option value="Back-end" class="bg-neutral-800">Back-end (functionaliteit / server)</option>
                                 <option value="Database" class="bg-neutral-800">Database</option>
-                                <option value="{{ __('Anders') }}" class="bg-neutral-800">Weet ik niet / {{ __('Anders') }}</option>
+                                <option value="Weet ik niet / Anders" class="bg-neutral-800">Weet ik niet / {{ __('Anders') }}</option>
                             </select>
                         </div>
                         <div class="mb-6">
-                            <label class="block text-sm opacity-60 mb-2">Hoe dringend is het?</label>
+                            <label class="block text-sm opacity-60 mb-2">{{ __('Hoe dringend is het?') }}</label>
                             <select name="q_urgency" class="detail-field w-full bg-transparent border-b border-white/20 py-3 text-sm outline-none focus:border-white/60 transition-colors">
                                 <option value="" class="bg-neutral-800" selected>{{ __('Maak een keuze') }}</option>
                                 <option value="Zeer dringend" class="bg-neutral-800">Zeer dringend (site ligt plat)</option>
@@ -133,20 +133,20 @@
                     {{-- Vragen voor Optimalisatie --}}
                     <div class="step-questions hidden" data-for="Optimalisatie">
                         <div class="mb-6">
-                            <label class="block text-sm opacity-60 mb-2">Wat moet geoptimaliseerd worden?</label>
+                            <label class="block text-sm opacity-60 mb-2">{{ __('Wat moet geoptimaliseerd worden?') }}</label>
                             <select name="q_optimize_what" class="detail-field w-full bg-transparent border-b border-white/20 py-3 text-sm outline-none focus:border-white/60 transition-colors">
                                 <option value="" class="bg-neutral-800" selected>{{ __('Maak een keuze') }}</option>
                                 <option value="Snelheid" class="bg-neutral-800">Snelheid / laadtijd</option>
                                 <option value="Codekwaliteit" class="bg-neutral-800">Codekwaliteit</option>
                                 <option value="Database" class="bg-neutral-800">Database optimalisatie</option>
                                 <option value="SEO" class="bg-neutral-800">SEO / vindbaarheid</option>
-                                <option value="{{ __('Anders') }}" class="bg-neutral-800">{{ __('Anders') }}</option>
+                                <option value="Anders" class="bg-neutral-800">{{ __('Anders') }}</option>
                             </select>
                         </div>
                     </div>
 
                     {{-- Vragen voor {{ __('Anders') }} --}}
-                    <div class="step-questions hidden" data-for="{{ __('Anders') }}">
+                    <div class="step-questions hidden" data-for="Anders">
                         <p class="text-sm text-slate-400">Geef in de {{ __('Volgende') }} stap een toelichting van je vraag.</p>
                     </div>
                 </div>
