@@ -78,8 +78,8 @@
                             <select name="q_design" class="detail-field w-full bg-transparent border-b border-white/20 py-3 text-sm outline-none focus:border-white/60 transition-colors">
                                 <option value="" class="bg-neutral-800" selected>{{ __('Maak een keuze') }}</option>
                                 <option value="Ja" class="bg-neutral-800">Ja</option>
-                                <option value="Nee" class="bg-neutral-800">Nee, ik heb hulp nodig bij het ontwerp</option>
-                                <option value="Gedeeltelijk" class="bg-neutral-800">Gedeeltelijk</option>
+                                <option value="Nee" class="bg-neutral-800">{{ __('Nee, ik heb hulp nodig bij het ontwerp') }}</option>
+                                <option value="Gedeeltelijk" class="bg-neutral-800">{{ __('Gedeeltelijk') }}</option>
                             </select>
                         </div>
                     </div>
@@ -90,9 +90,9 @@
                             <label class="block text-sm opacity-60 mb-2">{{ __('Wat moet er aangepast worden?') }}</label>
                             <select name="q_what_change" class="detail-field w-full bg-transparent border-b border-white/20 py-3 text-sm outline-none focus:border-white/60 transition-colors">
                                 <option value="" class="bg-neutral-800" selected>{{ __('Maak een keuze') }}</option>
-                                <option value="Design" class="bg-neutral-800">Design / lay-out aanpassen</option>
-                                <option value="Functionaliteit" class="bg-neutral-800">Nieuwe functionaliteit toevoegen</option>
-                                <option value="Inhoud" class="bg-neutral-800">Inhoud / tekst aanpassen</option>
+                                <option value="Design" class="bg-neutral-800">{{ __('Design / lay-out aanpassen') }}</option>
+                                <option value="Functionaliteit" class="bg-neutral-800">{{ __('Nieuwe functionaliteit toevoegen') }}</option>
+                                <option value="Inhoud" class="bg-neutral-800">{{ __('Inhoud / tekst aanpassen') }}</option>
                                 <option value="Anders" class="bg-neutral-800">{{ __('Anders') }}</option>
                             </select>
                         </div>
@@ -100,9 +100,9 @@
                             <label class="block text-sm opacity-60 mb-2">{{ __('Heeft u een bestaande site?') }}</label>
                             <select name="q_has_site" class="detail-field w-full bg-transparent border-b border-white/20 py-3 text-sm outline-none focus:border-white/60 transition-colors">
                                 <option value="" class="bg-neutral-800" selected>{{ __('Maak een keuze') }}</option>
-                                <option value="Ja" class="bg-neutral-800">Ja, die kan ik laten zien</option>
-                                <option value="Ja_offline" class="bg-neutral-800">Ja, maar staat nog niet online</option>
-                                <option value="Nee" class="bg-neutral-800">Nee, moet nog gebouwd worden</option>
+                                <option value="Ja" class="bg-neutral-800">{{ __('Ja, die kan ik laten zien') }}</option>
+                                <option value="Ja_offline" class="bg-neutral-800">{{ __('Ja, maar staat nog niet online') }}</option>
+                                <option value="Nee" class="bg-neutral-800">{{ __('Nee, moet nog gebouwd worden') }}</option>
                             </select>
                         </div>
                     </div>
@@ -113,9 +113,9 @@
                             <label class="block text-sm opacity-60 mb-2">{{ __('Waar situeert het probleem zich?') }}</label>
                             <select name="q_bug_location" class="detail-field w-full bg-transparent border-b border-white/20 py-3 text-sm outline-none focus:border-white/60 transition-colors">
                                 <option value="" class="bg-neutral-800" selected>{{ __('Maak een keuze') }}</option>
-                                <option value="Front-end" class="bg-neutral-800">Front-end (weergave / design)</option>
-                                <option value="Back-end" class="bg-neutral-800">Back-end (functionaliteit / server)</option>
-                                <option value="Database" class="bg-neutral-800">Database</option>
+                                <option value="Front-end" class="bg-neutral-800">{{ __('Front-end (weergave / design)') }}</option>
+                                <option value="Back-end" class="bg-neutral-800">{{ __('Back-end (functionaliteit / server)') }}</option>
+                                <option value="Database" class="bg-neutral-800">{{ __('Database') }}</option>
                                 <option value="Weet ik niet / Anders" class="bg-neutral-800">Weet ik niet / {{ __('Anders') }}</option>
                             </select>
                         </div>
@@ -123,9 +123,9 @@
                             <label class="block text-sm opacity-60 mb-2">{{ __('Hoe dringend is het?') }}</label>
                             <select name="q_urgency" class="detail-field w-full bg-transparent border-b border-white/20 py-3 text-sm outline-none focus:border-white/60 transition-colors">
                                 <option value="" class="bg-neutral-800" selected>{{ __('Maak een keuze') }}</option>
-                                <option value="Zeer dringend" class="bg-neutral-800">Zeer dringend (site ligt plat)</option>
-                                <option value="Binnen week" class="bg-neutral-800">Binnen een week</option>
-                                <option value="Geen haast" class="bg-neutral-800">Geen haast</option>
+                                <option value="Zeer dringend" class="bg-neutral-800">{{ __('Zeer dringend (site ligt plat)') }}</option>
+                                <option value="Binnen week" class="bg-neutral-800">{{ __('Binnen een week') }}</option>
+                                <option value="Geen haast" class="bg-neutral-800">{{ __('Geen haast') }}</option>
                             </select>
                         </div>
                     </div>
@@ -136,10 +136,10 @@
                             <label class="block text-sm opacity-60 mb-2">{{ __('Wat moet geoptimaliseerd worden?') }}</label>
                             <select name="q_optimize_what" class="detail-field w-full bg-transparent border-b border-white/20 py-3 text-sm outline-none focus:border-white/60 transition-colors">
                                 <option value="" class="bg-neutral-800" selected>{{ __('Maak een keuze') }}</option>
-                                <option value="Snelheid" class="bg-neutral-800">Snelheid / laadtijd</option>
-                                <option value="Codekwaliteit" class="bg-neutral-800">Codekwaliteit</option>
-                                <option value="Database" class="bg-neutral-800">Database optimalisatie</option>
-                                <option value="SEO" class="bg-neutral-800">SEO / vindbaarheid</option>
+                                <option value="Snelheid" class="bg-neutral-800">{{ __('Snelheid / laadtijd') }}</option>
+                                <option value="Codekwaliteit" class="bg-neutral-800">{{ __('Codekwaliteit') }}</option>
+                                <option value="Database" class="bg-neutral-800">{{ __('Database optimalisatie') }}</option>
+                                <option value="SEO" class="bg-neutral-800">{{ __('SEO / vindbaarheid') }}</option>
                                 <option value="Anders" class="bg-neutral-800">{{ __('Anders') }}</option>
                             </select>
                         </div>
