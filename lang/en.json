@@ -108,5 +108,12 @@
     "Codekwaliteit": "Code quality",
     "Database optimalisatie": "Database optimization",
     "SEO \/ vindbaarheid": "SEO \/ visibility",
-    "Weet ik niet \/ Anders": "I don't know \/ Other"
+    "Weet ik niet \/ Anders": "I don't know \/ Other",
+    "Wat voor project?": "What type of project?",
+    "Heeft u al een ontwerp?": "Do you already have a design?",
+    "Wat moet er aangepast worden?": "What needs to be changed?",
+    "Heeft u een bestaande site?": "Do you have an existing site?",
+    "Waar situeert het probleem zich?": "Where is the problem located?",
+    "Hoe dringend is het?": "How urgent is it?",
+    "Wat moet geoptimaliseerd worden?": "What needs to be optimized?"
 }
