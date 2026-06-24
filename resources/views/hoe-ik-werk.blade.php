@@ -15,13 +15,15 @@
                 <div class="absolute left-[23px] top-3 bottom-3 w-0.5 bg-gradient-to-b from-blue-500/40 via-blue-400/20 to-transparent"></div>
 
                 <div class="space-y-16 relative">
-                    @php $steps = [
-                        ['nr' => '01', 'title' => '{{ __('Aanvraag & Kennismaking') }}', 'desc' => '{{ __('Je neemt contact op via het formulier met je wensen en vragen. Ik bekijk je aanvraag en plan een gratis kennismaking om je project te bespreken.') }}'],
-                        ['nr' => '02', 'title' => '{{ __('Analyse & Offerte') }}', 'desc' => '{{ __('Na het gesprek maak ik een gedetailleerde analyse en ontvang je een duidelijke offerte met de aanpak, planning en kosten. Geen verrassingen achteraf.') }}'],
-                        ['nr' => '03', 'title' => '{{ __('Ontwikkeling') }}', 'desc' => '{{ __('Na jouw akkoord ga ik aan de slag. Ik werk in duidelijke fases en hou je regelmatig op de hoogte van de voortgang. Vragen of feedback? Je kunt altijd meedenken.') }}'],
-                        ['nr' => '04', 'title' => '{{ __('Testen & Oplevering') }}', 'desc' => '{{ __('Ik test alles grondig voordat jij het eindresultaat ontvangt. Na jouw goedkeuring wordt de site online gezet of het project aan je overgedragen.') }}'],
-                        ['nr' => '05', 'title' => '{{ __('Nazorg & Support') }}', 'desc' => '{{ __('Ook na oplevering sta ik voor je klaar. Voor vragen, kleine aanpassingen of problemen kun je altijd bij me terecht. Bij maandelijks onderhoud zorg ik dat alles up-to-date en veilig blijft.') }}'],
-                    ]; @endphp
+                    @php
+                        $steps = [
+                            ['nr' => '01', 'title' => __('Aanvraag & Kennismaking'), 'desc' => __('Je neemt contact op via het formulier met je wensen en vragen. Ik bekijk je aanvraag en plan een gratis kennismaking om je project te bespreken.')],
+                            ['nr' => '02', 'title' => __('Analyse & Offerte'), 'desc' => __('Na het gesprek maak ik een gedetailleerde analyse en ontvang je een duidelijke offerte met de aanpak, planning en kosten. Geen verrassingen achteraf.')],
+                            ['nr' => '03', 'title' => __('Ontwikkeling'), 'desc' => __('Na jouw akkoord ga ik aan de slag. Ik werk in duidelijke fases en hou je regelmatig op de hoogte van de voortgang. Vragen of feedback? Je kunt altijd meedenken.')],
+                            ['nr' => '04', 'title' => __('Testen & Oplevering'), 'desc' => __('Ik test alles grondig voordat jij het eindresultaat ontvangt. Na jouw goedkeuring wordt de site online gezet of het project aan je overgedragen.')],
+                            ['nr' => '05', 'title' => __('Nazorg & Support'), 'desc' => __('Ook na oplevering sta ik voor je klaar. Voor vragen, kleine aanpassingen of problemen kun je altijd bij me terecht. Bij maandelijks onderhoud zorg ik dat alles up-to-date en veilig blijft.')],
+                        ];
+                    @endphp
                     @foreach ($steps as $step)
                     <div class="flex gap-6 rounded-xl p-4 hover:-translate-y-1 hover:shadow-[0_0_40px_rgba(59,130,246,0.15)] transition-all duration-300 animate">
                         <div class="relative shrink-0 mt-1">
