@@ -61,7 +61,7 @@
     </nav>
 
     @php $locale = request()->cookie('locale', 'nl'); @endphp
-    <div class="fixed top-[76px] right-4 md:right-10 z-50 flex items-center gap-1 px-2.5 py-1.5 rounded-full bg-slate-900/60 backdrop-blur-md border border-white/5 shadow-lg">
+    <div class="hidden md:flex fixed top-[76px] right-10 z-50 items-center gap-1 px-2.5 py-1.5 rounded-full bg-slate-900/60 backdrop-blur-md border border-white/5 shadow-lg">
         <a href="{{ route('taal', 'en') }}" class="text-[11px] font-medium px-2 py-0.5 rounded-full transition-colors {{ $locale === 'en' ? 'text-white bg-blue-500/20' : 'text-slate-500 hover:text-slate-300' }}">EN</a>
         <span class="text-[8px] text-slate-700">|</span>
         <a href="{{ route('taal', 'nl') }}" class="text-[11px] font-medium px-2 py-0.5 rounded-full transition-colors {{ $locale === 'nl' ? 'text-white bg-blue-500/20' : 'text-slate-500 hover:text-slate-300' }}">NL</a>
