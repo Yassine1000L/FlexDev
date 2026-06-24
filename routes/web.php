@@ -11,8 +11,8 @@ Route::post('contact', [PageController::class, 'contactStore'])->name('contact.s
 Route::get('hoe-ik-werk', [PageController::class, 'hoeIkWerk'])->name('hoe-ik-werk');
 Route::get('taal/{locale}', function ($locale) {
     if (in_array($locale, ['en', 'nl', 'fr'])) {
-        session(['locale' => $locale]);
         app()->setLocale($locale);
+        return redirect()->back()->withCookie(cookie('locale', $locale, 43200));
     }
     return redirect()->back();
 })->name('taal');
