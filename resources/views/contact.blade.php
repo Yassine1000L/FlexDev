@@ -67,9 +67,9 @@
                             <label class="block text-sm opacity-60 mb-2">{{ __('Wat voor project?') }}</label>
                             <select name="q_project_type" class="detail-field w-full bg-transparent border-b border-white/20 py-3 text-sm outline-none focus:border-white/60 transition-colors">
                                 <option value="" class="bg-neutral-800" selected>{{ __('Maak een keuze') }}</option>
-                                <option value="Webshop" class="bg-neutral-800">Webshop</option>
-                                <option value="Website" class="bg-neutral-800">Website</option>
-                                <option value="Webapplicatie" class="bg-neutral-800">Webapplicatie</option>
+                                <option value="Webshop" class="bg-neutral-800">{{ __('Webshop') }}</option>
+                                <option value="Website" class="bg-neutral-800">{{ __('Website') }}</option>
+                                <option value="Webapplicatie" class="bg-neutral-800">{{ __('Webapplicatie') }}</option>
                                 <option value="Anders" class="bg-neutral-800">{{ __('Anders') }}</option>
                             </select>
                         </div>
@@ -77,7 +77,7 @@
                             <label class="block text-sm opacity-60 mb-2">{{ __('Heeft u al een ontwerp?') }}</label>
                             <select name="q_design" class="detail-field w-full bg-transparent border-b border-white/20 py-3 text-sm outline-none focus:border-white/60 transition-colors">
                                 <option value="" class="bg-neutral-800" selected>{{ __('Maak een keuze') }}</option>
-                                <option value="Ja" class="bg-neutral-800">Ja</option>
+                                <option value="Ja" class="bg-neutral-800">{{ __('Ja') }}</option>
                                 <option value="Nee" class="bg-neutral-800">{{ __('Nee, ik heb hulp nodig bij het ontwerp') }}</option>
                                 <option value="Gedeeltelijk" class="bg-neutral-800">{{ __('Gedeeltelijk') }}</option>
                             </select>
@@ -116,7 +116,7 @@
                                 <option value="Front-end" class="bg-neutral-800">{{ __('Front-end (weergave / design)') }}</option>
                                 <option value="Back-end" class="bg-neutral-800">{{ __('Back-end (functionaliteit / server)') }}</option>
                                 <option value="Database" class="bg-neutral-800">{{ __('Database') }}</option>
-                                <option value="Weet ik niet / Anders" class="bg-neutral-800">Weet ik niet / {{ __('Anders') }}</option>
+                                <option value="Weet ik niet / Anders" class="bg-neutral-800">{{ __('Weet ik niet / Anders') }}</option>
                             </select>
                         </div>
                         <div class="mb-6">
@@ -181,8 +181,8 @@
                         <label class="block text-sm opacity-60 mb-2">{{ __('Hoe wenst u gecontacteerd te worden?') }}</label>
                         <select name="preference" class="w-full bg-transparent border-b border-white/20 py-3 text-sm outline-none focus:border-white/60 transition-colors">
                             <option value="" class="bg-neutral-800">{{ __('Maak een keuze') }}</option>
-                            <option value="{{ __('WhatsApp') }}" class="bg-neutral-800">{{ __('WhatsApp') }}</option>
-                            <option value="{{ __('E-mail') }}" class="bg-neutral-800">{{ __('E-mail') }}</option>
+                            <option value="WhatsApp" class="bg-neutral-800">{{ __('WhatsApp') }}</option>
+                            <option value="E-mail" class="bg-neutral-800">{{ __('E-mail') }}</option>
                         </select>
                         @error('preference') <p class="text-red-400/70 text-xs mt-1">{{ $message }}</p> @enderror
                     </div>
