@@ -24,19 +24,19 @@
                 </p>
             </div>
             <div class="mt-20 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl animate">
-                <div class="rounded-xl border border-blue-500/10 bg-blue-500/5 p-5 text-center">
+                <div class="rounded-xl border border-blue-500/10 bg-blue-500/5 p-5 text-center hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(59,130,246,0.12)] transition-all duration-300">
                     <span class="text-2xl font-bold text-blue-400">5+</span>
                     <p class="text-xs text-slate-400 mt-1">Projecten gerealiseerd</p>
                 </div>
-                <div class="rounded-xl border border-blue-500/10 bg-blue-500/5 p-5 text-center">
+                <div class="rounded-xl border border-blue-500/10 bg-blue-500/5 p-5 text-center hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(59,130,246,0.12)] transition-all duration-300">
                     <span class="text-2xl font-bold text-blue-400">3+</span>
                     <p class="text-xs text-slate-400 mt-1">Jaar ervaring</p>
                 </div>
-                <div class="rounded-xl border border-blue-500/10 bg-blue-500/5 p-5 text-center">
+                <div class="rounded-xl border border-blue-500/10 bg-blue-500/5 p-5 text-center hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(59,130,246,0.12)] transition-all duration-300">
                     <span class="text-2xl font-bold text-blue-400">100%</span>
                     <p class="text-xs text-slate-400 mt-1">Tevreden klanten</p>
                 </div>
-                <div class="rounded-xl border border-blue-500/10 bg-blue-500/5 p-5 text-center">
+                <div class="rounded-xl border border-blue-500/10 bg-blue-500/5 p-5 text-center hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(59,130,246,0.12)] transition-all duration-300">
                     <span class="text-2xl font-bold text-blue-400">24u</span>
                     <p class="text-xs text-slate-400 mt-1">Reactietijd</p>
                 </div>

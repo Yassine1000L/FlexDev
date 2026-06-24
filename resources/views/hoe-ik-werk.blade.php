@@ -23,7 +23,7 @@
                         ['nr' => '05', 'title' => 'Nazorg & Support', 'desc' => 'Ook na oplevering sta ik voor je klaar. Voor vragen, kleine aanpassingen of problemen kun je altijd bij me terecht. Bij maandelijks onderhoud zorg ik dat alles up-to-date en veilig blijft.'],
                     ]; @endphp
                     @foreach ($steps as $step)
-                    <div class="flex gap-6 rounded-xl p-4 hover:-translate-y-1 hover:shadow-xl hover:shadow-blue-500/10 transition-all duration-300 animate">
+                    <div class="flex gap-6 rounded-xl p-4 hover:-translate-y-1 hover:shadow-[0_0_40px_rgba(59,130,246,0.15)] transition-all duration-300 animate">
                         <div class="relative shrink-0 mt-1">
                             <div class="w-12 h-12 rounded-full bg-blue-500/10 border border-blue-500/30 flex items-center justify-center">
                                 <span class="text-sm font-bold text-blue-400">{{ $step['nr'] }}</span>
