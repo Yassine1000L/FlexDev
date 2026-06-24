@@ -13,6 +13,10 @@
         $js = $manifest['resources/js/app.js']['file'] ?? null;
         $host = request()->getHttpHost();
         $base = (!str_contains($host, '127.0.0.1') && !str_contains($host, 'localhost') && !str_contains($host, '.test')) ? 'https://' . $host : '';
+        $locale = request()->cookie('locale', 'nl');
+        if (in_array($locale, ['en', 'nl', 'fr'])) {
+            app()->setLocale($locale);
+        }
     @endphp
     @if ($css)
         <link rel="stylesheet" href="{{ $base }}/build/{{ $css }}">
