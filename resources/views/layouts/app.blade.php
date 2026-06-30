@@ -45,7 +45,7 @@
         </a>
 
 
-        <div class="hidden md:flex items-center gap-1 md:gap-2">
+        <div class="hidden md:flex items-center gap-1">
             @php $links = [['route' => 'diensten', 'label' => __('Diensten')], ['route' => 'waarom', 'label' => __('Waarom')], ['route' => 'hoe-ik-werk', 'label' => __('Werkwijze')], ['route' => 'projecten', 'label' => __('Projecten')], ['route' => 'contact', 'label' => __('Contact')]]; @endphp
             @foreach ($links as $link)
                 @php $active = request()->routeIs($link['route']); @endphp
@@ -56,6 +56,18 @@
                     @endif
                 </a>
             @endforeach
+            @php $locale = request()->cookie('locale', 'nl'); $langs = ['nl' => 'NL', 'fr' => 'FR', 'en' => 'EN']; @endphp
+            <div class="relative ml-4">
+                <button id="desktopLangBtn" class="flex items-center gap-1.5 text-xs font-medium text-slate-400 hover:text-white px-3 py-2 rounded-lg transition-colors">
+                    <span>{{ strtoupper($locale) }}</span>
+                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </button>
+                <div id="desktopLangMenu" class="hidden absolute right-0 top-full mt-1 bg-slate-800/95 backdrop-blur-xl border border-white/10 rounded-xl p-1 shadow-2xl min-w-[80px] z-50">
+                    @foreach ($langs as $code => $label)
+                    <a href="{{ route('taal', $code) }}" class="block px-3 py-2 rounded-lg text-xs font-medium transition-colors {{ $locale === $code ? 'text-blue-400 bg-blue-500/10' : 'text-slate-400 hover:text-white hover:bg-white/5' }}">{{ $label }}</a>
+                    @endforeach
+                </div>
+            </div>
         </div>
 
         <div class="flex items-center gap-2 md:hidden">
@@ -87,15 +99,6 @@
             </a>
             @endforeach
         </div>
-    </div>
-
-    @php $locale = request()->cookie('locale', 'nl'); $langs = ['nl' => 'NL', 'fr' => 'FR', 'en' => 'EN']; @endphp
-    <div class="hidden md:block fixed top-[76px] right-10 z-50">
-        <select onchange="window.location.href=this.value" class="appearance-none bg-slate-900/70 backdrop-blur-md border border-white/10 text-xs font-medium text-slate-300 px-3 py-1.5 rounded-full cursor-pointer hover:border-white/30 transition-colors outline-none">
-            @foreach ($langs as $code => $label)
-                <option value="{{ route('taal', $code) }}" class="bg-slate-900" {{ $locale === $code ? 'selected' : '' }}>{{ $label }}</option>
-            @endforeach
-        </select>
     </div>
 
     <main>
@@ -147,6 +150,18 @@
             document.addEventListener('click', (e) => {
                 if (!langBtn.contains(e.target)) {
                     document.getElementById('mobileLangMenu').classList.add('hidden');
+                }
+            });
+        }
+        // Desktop language dropdown
+        const desktopLangBtn = document.getElementById('desktopLangBtn');
+        if (desktopLangBtn) {
+            desktopLangBtn.addEventListener('click', () => {
+                document.getElementById('desktopLangMenu').classList.toggle('hidden');
+            });
+            document.addEventListener('click', (e) => {
+                if (!desktopLangBtn.contains(e.target)) {
+                    document.getElementById('desktopLangMenu').classList.add('hidden');
                 }
             });
         }
