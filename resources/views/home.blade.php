@@ -2,6 +2,10 @@
 
 @section('content')
     <section class="min-h-screen flex flex-col justify-center px-6 pt-28 relative overflow-hidden">
+        <div class="absolute inset-0 pointer-events-none overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1920&q=80" alt="" class="w-full h-full object-cover opacity-[0.04] md:opacity-[0.06] blur-3xl scale-110">
+            <div class="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/80 to-transparent"></div>
+        </div>
         <div class="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] md:w-[800px] md:h-[800px] rounded-full bg-blue-500/10 blur-[120px] pointer-events-none"></div>
         <div class="absolute top-1/2 right-0 -translate-y-1/2 translate-x-1/4 opacity-[0.04] pointer-events-none select-none hidden md:block">
             <svg viewBox="0 0 32 32" class="w-[500px] h-[500px]">
