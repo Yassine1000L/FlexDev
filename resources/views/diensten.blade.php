@@ -8,7 +8,7 @@
             <p class="text-sm text-slate-400 mb-4 tracking-widest uppercase">{{ __('Wat Ik Doe') }}</p>
             <h2 class="text-3xl md:text-6xl font-bold tracking-tight mb-12 md:mb-20">{{ __('Diensten') }}</h2>
 
-            <div class="grid md:grid-cols-2 gap-8">
+            <div class="max-w-3xl mx-auto space-y-16">
                 @php
                     $images = [
                         '01' => 'https://images.unsplash.com/photo-1520085601670-ee14aa5fa3e8?w=600&h=400&fit=crop&auto=format',
@@ -31,7 +31,7 @@
                 @endphp
                 @foreach ($services as $svc)
                 <div class="rounded-xl overflow-hidden border border-white/10 hover:-translate-y-1 hover:shadow-[0_0_40px_rgba(59,130,246,0.15)] transition-all duration-300 animate">
-                    <div class="aspect-[3/2] overflow-hidden bg-slate-800">
+                    <div class="aspect-[16/9] md:aspect-[21/9] overflow-hidden bg-slate-800 rounded-t-xl">
                         <img src="{{ $images[$svc['nr']] }}" alt="{{ $svc['title'] }}" class="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity duration-500" loading="lazy">
                     </div>
                     <div class="p-6">
