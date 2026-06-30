@@ -197,7 +197,7 @@
                 <div class="flex items-center justify-between mt-10">
                     <button type="button" id="prevBtn" class="px-6 py-3 text-sm text-slate-400 hover:opacity-70 transition-opacity hidden">&larr; {{ __('Vorige') }}</button>
                     <button type="button" id="nextBtn" class="px-8 py-3 bg-blue-600 text-white text-sm font-medium rounded-full hover:bg-blue-500 transition-all cursor-pointer shadow-lg shadow-blue-500/20">{{ __('Volgende') }}</button>
-                    <button type="submit" id="submitBtn" class="px-8 py-3 bg-blue-600 text-white text-sm font-medium rounded-full hover:bg-blue-500 transition-all hidden cursor-pointer shadow-lg shadow-blue-500/20">Verstuur</button>
+                    <button type="submit" id="submitBtn" class="px-8 py-3 bg-blue-600 text-white text-sm font-medium rounded-full hover:bg-blue-500 transition-all hidden cursor-pointer shadow-lg shadow-blue-500/20">{{ __('Verstuur Bericht') }}</button>
                 </div>
             </form>
 
