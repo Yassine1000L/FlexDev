@@ -44,8 +44,8 @@
             <span class="hidden sm:block text-sm font-semibold tracking-tight text-slate-100">Flex Dev</span>
         </a>
 
-        
-        <div class="flex items-center gap-1 md:gap-2">
+
+        <div class="hidden md:flex items-center gap-1 md:gap-2">
             @php $links = [['route' => 'diensten', 'label' => __('Diensten')], ['route' => 'waarom', 'label' => __('Waarom')], ['route' => 'hoe-ik-werk', 'label' => __('Werkwijze')], ['route' => 'projecten', 'label' => __('Projecten')], ['route' => 'contact', 'label' => __('Contact')]]; @endphp
             @foreach ($links as $link)
                 @php $active = request()->routeIs($link['route']); @endphp
@@ -56,9 +56,31 @@
                     @endif
                 </a>
             @endforeach
-
         </div>
+
+        {{-- Hamburger --}}
+        <button id="hamburger" class="md:hidden flex items-center justify-center w-9 h-9 rounded-lg border border-white/10 hover:border-white/30 transition-colors">
+            <svg class="w-5 h-5 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
     </nav>
+
+    {{-- Mobile menu --}}
+    <div id="mobileMenu" class="fixed top-0 left-0 right-0 z-40 pt-24 pb-6 px-6 bg-slate-900/95 backdrop-blur-2xl border-b border-white/5 shadow-2xl hidden md:hidden">
+        <div class="flex flex-col gap-2">
+            @php $links = [['route' => 'diensten', 'label' => __('Diensten')], ['route' => 'waarom', 'label' => __('Waarom')], ['route' => 'hoe-ik-werk', 'label' => __('Werkwijze')], ['route' => 'projecten', 'label' => __('Projecten')], ['route' => 'contact', 'label' => __('Contact')]]; @endphp
+            @foreach ($links as $link)
+                @php $active = request()->routeIs($link['route']); @endphp
+                <a href="{{ route($link['route']) }}" class="block px-4 py-3 rounded-xl text-sm font-medium transition-colors {{ $active ? 'text-white bg-white/10' : 'text-slate-400 hover:text-white hover:bg-white/5' }}">{{ $link['label'] }}</a>
+            @endforeach
+            <div class="border-t border-white/5 mt-3 pt-3 flex items-center gap-3 px-4">
+                <span class="text-xs text-slate-500">{{ __('Taal') }}:</span>
+                @php $locale = request()->cookie('locale', 'nl'); @endphp
+                <a href="{{ route('taal', 'nl') }}" class="text-xs font-medium px-2 py-1 rounded {{ $locale === 'nl' ? 'text-blue-400 bg-blue-500/10' : 'text-slate-500' }}">NL</a>
+                <a href="{{ route('taal', 'fr') }}" class="text-xs font-medium px-2 py-1 rounded {{ $locale === 'fr' ? 'text-blue-400 bg-blue-500/10' : 'text-slate-500' }}">FR</a>
+                <a href="{{ route('taal', 'en') }}" class="text-xs font-medium px-2 py-1 rounded {{ $locale === 'en' ? 'text-blue-400 bg-blue-500/10' : 'text-slate-500' }}">EN</a>
+            </div>
+        </div>
+    </div>
 
     @php $locale = request()->cookie('locale', 'nl'); $langs = ['nl' => 'NL', 'fr' => 'FR', 'en' => 'EN']; @endphp
     <div class="fixed top-[60px] right-2 md:top-[76px] md:right-10 z-50">
@@ -101,6 +123,15 @@
             }
         });
         backBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+        // Hamburger menu
+        document.getElementById('hamburger').addEventListener('click', () => {
+            document.getElementById('mobileMenu').classList.toggle('hidden');
+        });
+        // Close menu on link click
+        document.querySelectorAll('#mobileMenu a').forEach(a => {
+            a.addEventListener('click', () => document.getElementById('mobileMenu').classList.add('hidden'));
+        });
     </script>
 </body>
 </html>
