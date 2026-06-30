@@ -45,7 +45,7 @@
                 </div>
                 <div class="rounded-xl border border-blue-500/10 bg-blue-500/5 p-5 text-center hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(59,130,246,0.12)] transition-all duration-300">
                     <svg class="w-6 h-6 mx-auto mb-2 text-blue-400/60" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-                    <span class="text-2xl font-bold text-blue-400">24u</span>
+                    <span class="text-2xl font-bold text-blue-400">{{ __('24u') }}</span>
                     <p class="text-xs text-slate-400 mt-1">{{ __('Reactietijd') }}</p>
                 </div>
             </div>
