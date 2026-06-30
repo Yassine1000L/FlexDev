@@ -50,7 +50,7 @@
                 </div>
             </div>
             <div class="mt-20 max-w-3xl mx-auto animate">
-                <h2 class="text-lg md:text-2xl font-semibold tracking-tight mb-8 text-center">{{ __('{{ __('Reviews') }}') }}</h2>
+                <h2 class="text-lg md:text-2xl font-semibold tracking-tight mb-8 text-center">{{ __('Reviews') }}</h2>
                 <div class="grid md:grid-cols-3 gap-4">
                     <div class="rounded-xl border border-white/5 bg-white/[0.02] p-5 text-center hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(59,130,246,0.08)] transition-all duration-300">
                         <div class="flex items-center justify-center gap-0.5 mb-3">
