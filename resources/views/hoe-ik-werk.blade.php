@@ -38,19 +38,9 @@
                         @endif
                     </div>
 
-                    {{-- Center: Arrow + Number + Dot --}}
+                    {{-- Center: Number + Dot --}}
                     <div class="flex flex-col items-center">
-                        <div class="flex items-center gap-2 text-blue-400/50 text-xs font-bold tracking-widest mb-2">
-                            @if ($isLeft)
-                            <span>{{ $step['nr'] }}</span>
-                            <div class="w-12 h-px bg-gradient-to-r from-blue-400/40 to-blue-400/10"></div>
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-                            @else
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16l-4-4m0 0l4-4m-4 4h18"/></svg>
-                            <div class="w-12 h-px bg-gradient-to-l from-blue-400/40 to-blue-400/10"></div>
-                            <span>{{ $step['nr'] }}</span>
-                            @endif
-                        </div>
+                        <span class="text-xs text-blue-400/60 font-medium mb-2">{{ $step['nr'] }}</span>
                         <div class="w-10 h-10 rounded-full bg-blue-500/10 border-2 border-blue-500/30 flex items-center justify-center">
                             <span class="w-2.5 h-2.5 rounded-full bg-blue-400 shadow-lg shadow-blue-500/30"></span>
                         </div>
