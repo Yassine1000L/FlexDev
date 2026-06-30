@@ -16,15 +16,29 @@
                 </div>
             @else
                 <p class="text-sm text-slate-400 mb-4 tracking-widest uppercase">{{ __('Laten we Praten') }}</p>
-                <h2 class="text-3xl md:text-6xl font-bold tracking-tight mb-4">{{ __('Neem Contact Op') }}</h2>
-                <p class="text-lg text-slate-300 max-w-xl mb-12 leading-relaxed">
-                    {{ __('Doorloop de stappen zodat ik precies weet wat je nodig hebt.') }}
-                </p>
+                <h2 class="text-3xl md:text-6xl font-bold tracking-tight mb-4">{{ __('Laten we jouw project bespreken') }}</h2>
+                <div class="flex items-center gap-2 text-sm text-slate-400 mb-3">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                    <span>{{ __('Duurt minder dan 2 minuten') }}</span>
+                </div>
+                <div class="flex flex-wrap gap-3 mb-8 text-xs text-slate-400">
+                    <span class="flex items-center gap-1.5"><svg class="w-3.5 h-3.5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> {{ __('Antwoord binnen 24 uur') }}</span>
+                    <span class="flex items-center gap-1.5"><svg class="w-3.5 h-3.5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> {{ __('Vrijblijvende offerte') }}</span>
+                    <span class="flex items-center gap-1.5"><svg class="w-3.5 h-3.5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> {{ __('Geen verplichtingen') }}</span>
+                </div>
 
             <form action="{{ route('contact.store') }}" method="POST" id="contactForm" novalidate>
                 @csrf
                 <input type="hidden" name="service" id="serviceInput">
                 <input type="hidden" name="details" id="detailsInput">
+
+                {{-- Progress bar --}}
+                <div class="flex items-center gap-2 mb-8">
+                    <div class="flex-1 h-1 rounded-full bg-white/10 overflow-hidden">
+                        <div id="progressBar" class="h-full rounded-full bg-gradient-to-r from-blue-500 to-blue-400 transition-all duration-500" style="width: 33.33%"></div>
+                    </div>
+                    <span id="progressText" class="text-xs text-slate-500 font-medium w-8 text-right">1/3</span>
+                </div>
 
                 {{-- Step 1 --}}
                 <div class="step" data-step="1">
@@ -32,24 +46,24 @@
                     <h3 class="text-2xl font-semibold mb-8">{{ __('Waar kunnen we je mee helpen?') }}</h3>
                     <div class="space-y-3">
                         <button type="button" class="choice-btn w-full text-left px-6 py-4 rounded-xl border border-blue-500/10 hover:border-blue-400/40 bg-blue-500/5 hover:bg-blue-500/10 transition-all cursor-pointer border-l-[3px] border-l-transparent" data-value="Nieuw project">
-                            <span class="font-medium">{{ __('Ik wil een nieuw project starten') }}</span>
-                            <p class="text-sm text-slate-400 mt-1">{{ __('Van concept tot oplevering — ik bouw jouw idee.') }}</p>
+                            <span class="flex items-center gap-3"><span class="text-xl">🚀</span> <span class="font-medium">{{ __('Ik wil een nieuw project starten') }}</span></span>
+                            <p class="text-sm text-slate-400 mt-1 ml-9">{{ __('Van concept tot oplevering — ik bouw jouw idee.') }}</p>
                         </button>
                         <button type="button" class="choice-btn w-full text-left px-6 py-4 rounded-xl border border-blue-500/10 hover:border-blue-400/40 bg-blue-500/5 hover:bg-blue-500/10 transition-all cursor-pointer border-l-[3px] border-l-transparent" data-value="Aanpassing">
-                            <span class="font-medium">{{ __('Ik wil een bestaande website aanpassen of verbeteren') }}</span>
-                            <p class="text-sm text-slate-400 mt-1">{{ __('Nieuwe functies, redesign of uitbreiding van je huidige site.') }}</p>
+                            <span class="flex items-center gap-3"><span class="text-xl">🛠</span> <span class="font-medium">{{ __('Ik wil een bestaande website aanpassen of verbeteren') }}</span></span>
+                            <p class="text-sm text-slate-400 mt-1 ml-9">{{ __('Nieuwe functies, redesign of uitbreiding van je huidige site.') }}</p>
                         </button>
                         <button type="button" class="choice-btn w-full text-left px-6 py-4 rounded-xl border border-blue-500/10 hover:border-blue-400/40 bg-blue-500/5 hover:bg-blue-500/10 transition-all cursor-pointer border-l-[3px] border-l-transparent" data-value="Bugfixing">
-                            <span class="font-medium">{{ __('Ik wil een bug laten oplossen') }}</span>
-                            <p class="text-sm text-slate-400 mt-1">{{ __('Iets werkt niet naar behoren? Ik zoek het voor je uit.') }}</p>
+                            <span class="flex items-center gap-3"><span class="text-xl">🐞</span> <span class="font-medium">{{ __('Ik wil een bug laten oplossen') }}</span></span>
+                            <p class="text-sm text-slate-400 mt-1 ml-9">{{ __('Iets werkt niet naar behoren? Ik zoek het voor je uit.') }}</p>
                         </button>
                         <button type="button" class="choice-btn w-full text-left px-6 py-4 rounded-xl border border-blue-500/10 hover:border-blue-400/40 bg-blue-500/5 hover:bg-blue-500/10 transition-all cursor-pointer border-l-[3px] border-l-transparent" data-value="Optimalisatie">
-                            <span class="font-medium">{{ __('Ik wil een bestaand project optimaliseren') }}</span>
-                            <p class="text-sm text-slate-400 mt-1">{{ __('Snelheid, codekwaliteit of gebruikerservaring verbeteren.') }}</p>
+                            <span class="flex items-center gap-3"><span class="text-xl">⚡</span> <span class="font-medium">{{ __('Ik wil een bestaand project optimaliseren') }}</span></span>
+                            <p class="text-sm text-slate-400 mt-1 ml-9">{{ __('Snelheid, codekwaliteit of gebruikerservaring verbeteren.') }}</p>
                         </button>
                         <button type="button" class="choice-btn w-full text-left px-6 py-4 rounded-xl border border-blue-500/10 hover:border-blue-400/40 bg-blue-500/5 hover:bg-blue-500/10 transition-all cursor-pointer border-l-[3px] border-l-transparent" data-value="Anders">
-                            <span class="font-medium">{{ __('Anders') }}</span>
-                            <p class="text-sm text-slate-400 mt-1">{{ __('Iets anders? Geef het aan in stap 3.') }}</p>
+                            <span class="flex items-center gap-3"><span class="text-xl">💬</span> <span class="font-medium">{{ __('Anders') }}</span></span>
+                            <p class="text-sm text-slate-400 mt-1 ml-9">{{ __('Iets anders? Geef het aan in stap 3.') }}</p>
                         </button>
                     </div>
                     @error('service') <p class="text-red-400/70 text-xs mt-3">{{ $message }}</p> @enderror
@@ -220,6 +234,9 @@
             document.querySelectorAll('.step').forEach(s => s.classList.add('hidden'));
             document.querySelector(`.step[data-step="${step}"]`).classList.remove('hidden');
             updateButtons();
+            const pct = ((step - 1) / (totalSteps - 1)) * 100;
+            document.getElementById('progressBar').style.width = Math.round(pct) + '%';
+            document.getElementById('progressText').textContent = step + '/' + totalSteps;
         }
 
         // Step 1: choice buttons → auto next
