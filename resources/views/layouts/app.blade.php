@@ -46,7 +46,7 @@
 
         
         <div class="flex items-center gap-1 md:gap-2">
-            @php $links = [['route' => 'diensten', 'label' => __('Diensten')], ['route' => 'hoe-ik-werk', 'label' => __('Werkwijze')], ['route' => 'projecten', 'label' => __('Projecten')], ['route' => 'contact', 'label' => __('Contact')]]; @endphp
+            @php $links = [['route' => 'diensten', 'label' => __('Diensten')], ['route' => 'waarom', 'label' => __('Waarom')], ['route' => 'hoe-ik-werk', 'label' => __('Werkwijze')], ['route' => 'projecten', 'label' => __('Projecten')], ['route' => 'contact', 'label' => __('Contact')]]; @endphp
             @foreach ($links as $link)
                 @php $active = request()->routeIs($link['route']); @endphp
                 <a href="{{ route($link['route']) }}" class="relative px-3 md:px-4 py-2 text-xs md:text-sm font-medium rounded-lg transition-all duration-200 text-center {{ $active ? 'text-white bg-white/10' : 'text-slate-400 hover:text-white hover:bg-white/5' }}">

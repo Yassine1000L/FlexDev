@@ -22,6 +22,11 @@ class PageController extends Controller
         return view('projecten');
     }
 
+    public function waarom()
+    {
+        return view('waarom');
+    }
+
     public function contact()
     {
         return view('contact');
