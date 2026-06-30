@@ -17,6 +17,10 @@
             <p class="mt-8 text-lg md:text-xl text-slate-300 max-w-xl leading-relaxed">
                 {{ __('Realisatie van WebDevelopement - met onderhoud, aanpassingen, optimalisatie en bugfixing.') }}
             </p>
+            <div class="mt-10 flex flex-col sm:flex-row gap-4">
+                <a href="{{ route('contact') }}" class="inline-flex items-center px-8 py-3 bg-blue-600 text-white text-sm font-medium rounded-full hover:bg-blue-500 transition-all shadow-lg shadow-blue-500/20">{{ __('Neem contact op') }}</a>
+                <a href="{{ route('projecten') }}" class="inline-flex items-center px-8 py-3 border border-blue-500/30 text-sm font-medium rounded-full hover:border-blue-400/60 hover:bg-blue-500/5 transition-all">{{ __('Bekijk mijn werk') }}</a>
+            </div>
             <div class="mt-16 max-w-2xl animate">
                 <h2 class="text-lg md:text-2xl font-semibold tracking-tight mb-4">{{ __('Over Flex Dev') }}</h2>
                 <p class="text-base text-slate-300 leading-relaxed">
@@ -73,10 +77,6 @@
                         <span class="text-xs opacity-70">Java</span>
                     </div>
                 </div>
-            </div>
-            <div class="mt-12 flex flex-col sm:flex-row gap-4 animate">
-                <a href="{{ route('contact') }}" class="inline-flex items-center px-8 py-3 bg-blue-600 text-white text-sm font-medium rounded-full hover:bg-blue-500 transition-all shadow-lg shadow-blue-500/20">{{ __('Neem contact op') }}</a>
-                <a href="{{ route('projecten') }}" class="inline-flex items-center px-8 py-3 border border-blue-500/30 text-sm font-medium rounded-full hover:border-blue-400/60 hover:bg-blue-500/5 transition-all">{{ __('Bekijk mijn werk') }}</a>
             </div>
         </div>
     </section>
