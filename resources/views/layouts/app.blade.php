@@ -58,10 +58,23 @@
             @endforeach
         </div>
 
-        {{-- Hamburger --}}
-        <button id="hamburger" class="md:hidden flex items-center justify-center w-9 h-9 rounded-lg border border-white/10 hover:border-white/30 transition-colors">
-            <svg class="w-5 h-5 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
-        </button>
+        <div class="flex items-center gap-2 md:hidden">
+            @php $locale = request()->cookie('locale', 'nl'); $langs = ['nl' => 'NL', 'fr' => 'FR', 'en' => 'EN']; @endphp
+            <div class="relative">
+                <button id="mobileLangBtn" class="flex items-center gap-1 text-xs font-medium text-slate-300 px-2 py-1.5 rounded-lg border border-white/10 hover:border-white/30 transition-colors">
+                    <span>{{ strtoupper($locale) }}</span>
+                    <svg class="w-3 h-3 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </button>
+                <div id="mobileLangMenu" class="hidden absolute right-0 top-full mt-1 bg-slate-800/95 backdrop-blur-xl border border-white/10 rounded-xl p-1 shadow-2xl min-w-[80px] z-50">
+                    @foreach ($langs as $code => $label)
+                    <a href="{{ route('taal', $code) }}" class="block px-3 py-2 rounded-lg text-xs font-medium transition-colors {{ $locale === $code ? 'text-blue-400 bg-blue-500/10' : 'text-slate-400 hover:text-white hover:bg-white/5' }}">{{ $label }}</a>
+                    @endforeach
+                </div>
+            </div>
+            <button id="hamburger" class="flex items-center justify-center w-9 h-9 rounded-lg border border-white/10 hover:border-white/30 transition-colors">
+                <svg class="w-5 h-5 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+            </button>
+        </div>
     </nav>
 
     {{-- Mobile menu --}}
@@ -72,18 +85,11 @@
                 @php $active = request()->routeIs($link['route']); @endphp
                 <a href="{{ route($link['route']) }}" class="block px-4 py-3 rounded-xl text-sm font-medium transition-colors {{ $active ? 'text-white bg-white/10' : 'text-slate-400 hover:text-white hover:bg-white/5' }}">{{ $link['label'] }}</a>
             @endforeach
-            <div class="border-t border-white/5 mt-3 pt-3 flex items-center gap-3 px-4">
-                <span class="text-xs text-slate-500">{{ __('Taal') }}:</span>
-                @php $locale = request()->cookie('locale', 'nl'); @endphp
-                <a href="{{ route('taal', 'nl') }}" class="text-xs font-medium px-2 py-1 rounded {{ $locale === 'nl' ? 'text-blue-400 bg-blue-500/10' : 'text-slate-500' }}">NL</a>
-                <a href="{{ route('taal', 'fr') }}" class="text-xs font-medium px-2 py-1 rounded {{ $locale === 'fr' ? 'text-blue-400 bg-blue-500/10' : 'text-slate-500' }}">FR</a>
-                <a href="{{ route('taal', 'en') }}" class="text-xs font-medium px-2 py-1 rounded {{ $locale === 'en' ? 'text-blue-400 bg-blue-500/10' : 'text-slate-500' }}">EN</a>
-            </div>
         </div>
     </div>
 
     @php $locale = request()->cookie('locale', 'nl'); $langs = ['nl' => 'NL', 'fr' => 'FR', 'en' => 'EN']; @endphp
-    <div class="fixed top-[60px] right-2 md:top-[76px] md:right-10 z-50">
+    <div class="hidden md:block fixed top-[76px] right-10 z-50">
         <select onchange="window.location.href=this.value" class="appearance-none bg-slate-900/70 backdrop-blur-md border border-white/10 text-xs font-medium text-slate-300 px-3 py-1.5 rounded-full cursor-pointer hover:border-white/30 transition-colors outline-none">
             @foreach ($langs as $code => $label)
                 <option value="{{ route('taal', $code) }}" class="bg-slate-900" {{ $locale === $code ? 'selected' : '' }}>{{ $label }}</option>
@@ -128,10 +134,21 @@
         document.getElementById('hamburger').addEventListener('click', () => {
             document.getElementById('mobileMenu').classList.toggle('hidden');
         });
-        // Close menu on link click
         document.querySelectorAll('#mobileMenu a').forEach(a => {
             a.addEventListener('click', () => document.getElementById('mobileMenu').classList.add('hidden'));
         });
+        // Mobile language dropdown
+        const langBtn = document.getElementById('mobileLangBtn');
+        if (langBtn) {
+            langBtn.addEventListener('click', () => {
+                document.getElementById('mobileLangMenu').classList.toggle('hidden');
+            });
+            document.addEventListener('click', (e) => {
+                if (!langBtn.contains(e.target)) {
+                    document.getElementById('mobileLangMenu').classList.add('hidden');
+                }
+            });
+        }
     </script>
 </body>
 </html>
