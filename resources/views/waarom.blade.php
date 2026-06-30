@@ -43,6 +43,22 @@
                     <h3 class="text-lg font-semibold mb-2">{{ __('Support après livraison') }}</h3>
                     <p class="text-sm text-slate-400 leading-relaxed">{{ __('Support desc') }}</p>
                 </div>
+
+                <div class="rounded-2xl border border-white/10 bg-gradient-to-br from-rose-500/5 to-transparent p-8 hover:border-rose-400/30 hover:shadow-[0_0_40px_rgba(244,63,94,0.12)] transition-all duration-500" style="animation: fadeLeft 0.6s ease-out 0.8s both">
+                    <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-rose-500 to-rose-600 flex items-center justify-center mb-5 shadow-lg shadow-rose-500/20">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">{{ __('Tarifs compétitifs') }}</h3>
+                    <p class="text-sm text-slate-400 leading-relaxed">{{ __('Tarifs desc') }}</p>
+                </div>
+
+                <div class="rounded-2xl border border-white/10 bg-gradient-to-br from-cyan-500/5 to-transparent p-8 hover:border-cyan-400/30 hover:shadow-[0_0_40px_rgba(34,211,238,0.12)] transition-all duration-500" style="animation: fadeRight 0.6s ease-out 1s both">
+                    <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-500 to-cyan-600 flex items-center justify-center mb-5 shadow-lg shadow-cyan-500/20">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">{{ __('Devis clair et transparent') }}</h3>
+                    <p class="text-sm text-slate-400 leading-relaxed">{{ __('Devis desc') }}</p>
+                </div>
             </div>
         </div>
     </section>
