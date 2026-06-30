@@ -3,44 +3,46 @@
 @section('title', __('Hoe Ik Werk') . ' | Flex Dev')
 
 @section('content')
-    <section class="min-h-screen flex flex-col justify-center px-6 pt-28">
-        <div class="max-w-5xl mx-auto w-full">
-            <p class="text-sm text-slate-400 mb-4 tracking-widest uppercase">{{ __('Werkwijze') }}</p>
-            <h2 class="text-3xl md:text-6xl font-bold tracking-tight mb-4">{{ __('Hoe Ik Werk') }}</h2>
-            <p class="text-base text-slate-300 max-w-2xl mb-20 leading-relaxed">
-                {{ __('Van aanvraag tot oplevering — een gestructureerd proces dat zorgt voor duidelijkheid, kwaliteit en een resultaat dat volledig aan je verwachtingen voldoet.') }}
-            </p>
+    <section class="min-h-screen flex flex-col justify-center px-6 pt-28 relative overflow-hidden">
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[800px] rounded-full bg-blue-500/5 blur-[150px] pointer-events-none"></div>
 
-            <div class="flex flex-col items-center">
+        <div class="max-w-5xl mx-auto w-full relative z-10">
+            <p class="text-sm text-slate-400 mb-4 tracking-widest uppercase text-center">{{ __('Werkwijze') }}</p>
+            <h2 class="text-3xl md:text-5xl font-bold tracking-tight mb-20 text-center">{{ __('Comment se déroule votre projet') }} ?</h2>
+
+            <div class="relative">
+                <div class="absolute left-1/2 -translate-x-px top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-500/40 via-blue-400/20 to-blue-500/40 hidden md:block"></div>
+
                 @php
                     $steps = [
-                        ['nr' => '01', 'title' => __('Aanvraag & Kennismaking'), 'desc' => __('Je neemt contact op via het formulier met je wensen en vragen.')],
-                        ['nr' => '02', 'title' => __('Analyse & Offerte'), 'desc' => __('Je ontvangt een duidelijke offerte met de aanpak, planning en kosten.')],
-                        ['nr' => '03', 'title' => __('Ontwikkeling'), 'desc' => __('Ik ga aan de slag in duidelijke fases en hou je op de hoogte.')],
-                        ['nr' => '04', 'title' => __('Testen & Oplevering'), 'desc' => __('Alles wordt grondig getest voordat het eindresultaat wordt opgeleverd.')],
-                        ['nr' => '05', 'title' => __('Nazorg & Support'), 'desc' => __('Ook na oplevering sta ik klaar voor vragen of onderhoud.')],
+                        ['icon' => '📞', 'title' => __('Premier contact'), 'desc' => __('Nous discutons de vos besoins et objectifs.')],
+                        ['icon' => '📋', 'title' => __('Analyse'), 'desc' => __('Je prépare une proposition détaillée avec planning et budget.')],
+                        ['icon' => '💻', 'title' => __('Développement'), 'desc' => __('Je développe votre projet en phases, avec des retours réguliers.')],
+                        ['icon' => '🧪', 'title' => __('Tests'), 'desc' => __('Chaque fonctionnalité est testée avant validation.')],
+                        ['icon' => '🚀', 'title' => __('Mise en ligne'), 'desc' => __('Votre site est publié et prêt à être utilisé.')],
+                        ['icon' => '🛠', 'title' => __('Support'), 'desc' => __('Je reste disponible pour toute question ou amélioration.')],
                     ];
                 @endphp
 
                 @foreach ($steps as $i => $step)
-                <div class="flex flex-col items-center animate">
-                    <div class="w-full max-w-lg rounded-2xl border border-white/10 bg-slate-900/50 p-6 hover:border-blue-500/30 hover:shadow-[0_0_30px_rgba(59,130,246,0.1)] transition-all duration-300">
-                        <div class="flex items-center gap-4">
-                            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center shadow-lg shadow-blue-500/20 shrink-0">
-                                <span class="text-sm font-bold text-white">{{ $step['nr'] }}</span>
-                            </div>
-                            <div>
-                                <h3 class="text-base font-semibold">{{ $step['title'] }}</h3>
-                                <p class="text-xs text-slate-400 mt-0.5">{{ $step['desc'] }}</p>
-                            </div>
+                @php $isLeft = $i % 2 === 0; @endphp
+                <div class="flex items-center gap-6 md:gap-12 mb-8 md:mb-0 relative">
+                    {{-- Card --}}
+                    <div class="w-full md:w-[42%] {{ $isLeft ? 'md:order-1' : 'md:order-3' }} {{ $isLeft ? 'md:text-right' : 'md:text-left' }}">
+                        <div class="rounded-2xl border border-white/10 bg-gradient-to-br from-slate-900/80 to-slate-900/40 backdrop-blur-sm p-6 hover:border-blue-500/30 hover:shadow-[0_0_40px_rgba(59,130,246,0.12)] hover:-translate-y-1 transition-all duration-500 animate">
+                            <span class="text-2xl md:text-3xl block mb-3">{{ $step['icon'] }}</span>
+                            <h3 class="text-lg font-semibold mb-2">{{ $step['title'] }}</h3>
+                            <p class="text-sm text-slate-400 leading-relaxed">{{ $step['desc'] }}</p>
                         </div>
                     </div>
-                    @if (!$loop->last)
-                    <div class="flex flex-col items-center py-3">
-                        <div class="w-px h-6 border-l border-dashed border-blue-400/30"></div>
-                        <svg class="w-4 h-4 text-blue-400/40" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg>
+
+                    {{-- Timeline dot --}}
+                    <div class="hidden md:flex md:order-2 items-center justify-center w-12 h-12 rounded-full bg-blue-500/10 border-2 border-blue-500/30 shrink-0 relative z-10">
+                        <span class="w-3 h-3 rounded-full bg-blue-400 shadow-lg shadow-blue-500/30"></span>
                     </div>
-                    @endif
+
+                    {{-- Empty spacer for right side --}}
+                    <div class="hidden md:block md:w-[42%] md:order-3"></div>
                 </div>
                 @endforeach
             </div>
