@@ -21,13 +21,13 @@
                 <a href="{{ route('contact') }}" class="inline-flex items-center px-8 py-3 bg-blue-600 text-white text-sm font-medium rounded-full hover:bg-blue-500 transition-all shadow-lg shadow-blue-500/20">{{ __('Neem contact op') }}</a>
                 <a href="{{ route('projecten') }}" class="inline-flex items-center px-8 py-3 border border-blue-500/30 text-sm font-medium rounded-full hover:border-blue-400/60 hover:bg-blue-500/5 transition-all">{{ __('Bekijk mijn werk') }}</a>
             </div>
-            <div class="mt-16 max-w-2xl animate">
+            <div class="mt-16 max-w-2xl">
                 <h2 class="text-lg md:text-2xl font-semibold tracking-tight mb-4">{{ __('Over Flex Dev') }}</h2>
                 <p class="text-base text-slate-300 leading-relaxed">
                     {{ __('Flex Dev staat voor de ontwikkeling en optimalisatie van webapplicaties en websites. Van het bouwen van maatwerk-platforms tot het doorvoeren van gerichte aanpassingen en het oplossen van complexe technische vraagstukken — elk project wordt uitgevoerd met oog voor kwaliteit, performantie en gebruiksgemak. Mijn aanpak is gestructureerd, transparant en gericht op een duurzaam resultaat.') }}
                 </p>
             </div>
-            <div class="mt-20 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl animate">
+            <div class="mt-20 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl">
                 <div class="rounded-xl border border-blue-500/10 bg-blue-500/5 p-5 text-center hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(59,130,246,0.12)] transition-all duration-300">
                     <svg class="w-6 h-6 mx-auto mb-2 text-blue-400/60" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                     <span class="text-2xl font-bold text-blue-400">5+</span>
@@ -49,7 +49,7 @@
                     <p class="text-xs text-slate-400 mt-1">{{ __('Reactietijd') }}</p>
                 </div>
             </div>
-            <div class="mt-20 max-w-3xl mx-auto animate">
+            <div class="mt-20 max-w-3xl mx-auto">
                 <h2 class="text-lg md:text-2xl font-semibold tracking-tight mb-2 text-center">{{ __('Reviews') }}</h2>
                 <p class="text-sm text-slate-400 mb-8 text-center">{{ __('Ils m\'ont fait confiance') }}</p>
                 <div class="grid md:grid-cols-3 gap-4">
@@ -88,7 +88,7 @@
                     </div>
                 </div>
             </div>
-            <div class="mt-20 max-w-3xl animate">
+            <div class="mt-20 max-w-3xl">
                 <h2 class="text-lg md:text-2xl font-semibold tracking-tight mb-6 md:mb-8">{{ __('Technologieën') }}</h2>
                 <div class="flex flex-wrap gap-x-6 gap-y-3">
                     <div class="flex items-center gap-2 text-slate-300 hover:opacity-80 hover:-translate-y-0.5 transition-all duration-300 whitespace-nowrap">
