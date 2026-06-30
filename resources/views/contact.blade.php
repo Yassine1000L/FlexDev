@@ -75,93 +75,80 @@
                     <h3 class="text-2xl font-semibold mb-8">{{ __('Nog een paar vragen') }}</h3>
                     <p id="step2Error" class="hidden text-red-400/80 text-sm mb-6">{{ __('Maak eerst een keuze') }}</p>
 
-                    {{-- Vragen voor Nieuw project --}}
-                    <div class="step-questions" data-for="Nieuw project">
+                    @php
+                        $questions = [
+                            'Nieuw project' => [
+                                ['label' => __('Wat voor project?'), 'name' => 'q_project_type', 'options' => [
+                                    ['value' => 'Site vitrine', 'icon' => '🌐', 'text' => __('Site vitrine')],
+                                    ['value' => 'E-commerce', 'icon' => '🛒', 'text' => __('E-commerce')],
+                                    ['value' => 'Application web', 'icon' => '📱', 'text' => __('Application web')],
+                                    ['value' => 'Anders', 'icon' => '⚙️', 'text' => __('Anders')],
+                                ]],
+                                ['label' => __('Heeft u al een ontwerp?'), 'name' => 'q_design', 'options' => [
+                                    ['value' => 'Ja', 'icon' => '✅', 'text' => __('Ja')],
+                                    ['value' => 'Nee', 'icon' => '❌', 'text' => __('Nee, ik heb hulp nodig bij het ontwerp')],
+                                    ['value' => 'Gedeeltelijk', 'icon' => '🔶', 'text' => __('Gedeeltelijk')],
+                                ]],
+                            ],
+                            'Aanpassing' => [
+                                ['label' => __('Wat moet er aangepast worden?'), 'name' => 'q_what_change', 'options' => [
+                                    ['value' => 'Design', 'icon' => '🎨', 'text' => __('Design / lay-out aanpassen')],
+                                    ['value' => 'Functionaliteit', 'icon' => '⚙️', 'text' => __('Nieuwe functionaliteit toevoegen')],
+                                    ['value' => 'Inhoud', 'icon' => '📝', 'text' => __('Inhoud / tekst aanpassen')],
+                                    ['value' => 'Anders', 'icon' => '➕', 'text' => __('Anders')],
+                                ]],
+                                ['label' => __('Heeft u een bestaande site?'), 'name' => 'q_has_site', 'options' => [
+                                    ['value' => 'Ja', 'icon' => '🌐', 'text' => __('Ja, die kan ik laten zien')],
+                                    ['value' => 'Ja_offline', 'icon' => '💻', 'text' => __('Ja, maar staat nog niet online')],
+                                    ['value' => 'Nee', 'icon' => '🆕', 'text' => __('Nee, moet nog gebouwd worden')],
+                                ]],
+                            ],
+                            'Bugfixing' => [
+                                ['label' => __('Waar situeert het probleem zich?'), 'name' => 'q_bug_location', 'options' => [
+                                    ['value' => 'Front-end', 'icon' => '🖥️', 'text' => __('Front-end (weergave / design)')],
+                                    ['value' => 'Back-end', 'icon' => '⚙️', 'text' => __('Back-end (functionaliteit / server)')],
+                                    ['value' => 'Database', 'icon' => '🗄️', 'text' => __('Database')],
+                                    ['value' => 'Weet ik niet / Anders', 'icon' => '❓', 'text' => __('Weet ik niet / Anders')],
+                                ]],
+                                ['label' => __('Hoe dringend is het?'), 'name' => 'q_urgency', 'options' => [
+                                    ['value' => 'Zeer dringend', 'icon' => '🔴', 'text' => __('Zeer dringend (site ligt plat)')],
+                                    ['value' => 'Binnen week', 'icon' => '🟡', 'text' => __('Binnen een week')],
+                                    ['value' => 'Geen haast', 'icon' => '🟢', 'text' => __('Geen haast')],
+                                ]],
+                            ],
+                            'Optimalisatie' => [
+                                ['label' => __('Wat moet geoptimaliseerd worden?'), 'name' => 'q_optimize_what', 'options' => [
+                                    ['value' => 'Snelheid', 'icon' => '⚡', 'text' => __('Snelheid / laadtijd')],
+                                    ['value' => 'Codekwaliteit', 'icon' => '📄', 'text' => __('Codekwaliteit')],
+                                    ['value' => 'Database', 'icon' => '🗄️', 'text' => __('Database optimalisatie')],
+                                    ['value' => 'SEO', 'icon' => '📈', 'text' => __('SEO / vindbaarheid')],
+                                    ['value' => 'Anders', 'icon' => '⚙️', 'text' => __('Anders')],
+                                ]],
+                            ],
+                        ];
+                    @endphp
+                    @foreach ($questions as $service => $qs)
+                    <div class="step-questions{{ $service === 'Nieuw project' ? '' : ' hidden' }}" data-for="{{ $service }}">
+                        @foreach ($qs as $q)
                         <div class="mb-6">
-                            <label class="block text-sm opacity-60 mb-2">{{ __('Wat voor project?') }}</label>
-                            <select name="q_project_type" class="detail-field w-full bg-transparent border-b border-white/20 py-3 text-sm outline-none focus:border-white/60 transition-colors">
-                                <option value="" class="bg-neutral-800" selected>{{ __('Maak een keuze') }}</option>
-                                <option value="Webshop" class="bg-neutral-800">{{ __('Webshop') }}</option>
-                                <option value="Website" class="bg-neutral-800">{{ __('Website') }}</option>
-                                <option value="Webapplicatie" class="bg-neutral-800">{{ __('Webapplicatie') }}</option>
-                                <option value="Anders" class="bg-neutral-800">{{ __('Anders') }}</option>
-                            </select>
+                            <label class="block text-sm text-slate-400 mb-3">{{ $q['label'] }}</label>
+                            <div class="flex flex-wrap gap-2">
+                                <input type="hidden" name="{{ $q['name'] }}" class="chip-value">
+                                @foreach ($q['options'] as $opt)
+                                <button type="button" class="chip-btn px-4 py-2.5 rounded-xl border border-white/10 bg-white/[0.02] text-sm text-slate-300 hover:border-blue-400/40 hover:bg-blue-500/5 transition-all duration-200 flex items-center gap-2 cursor-pointer" data-value="{{ $opt['value'] }}">
+                                    <span>{{ $opt['icon'] }}</span>
+                                    <span>{{ $opt['text'] }}</span>
+                                </button>
+                                @endforeach
+                            </div>
                         </div>
-                        <div class="mb-6">
-                            <label class="block text-sm opacity-60 mb-2">{{ __('Heeft u al een ontwerp?') }}</label>
-                            <select name="q_design" class="detail-field w-full bg-transparent border-b border-white/20 py-3 text-sm outline-none focus:border-white/60 transition-colors">
-                                <option value="" class="bg-neutral-800" selected>{{ __('Maak een keuze') }}</option>
-                                <option value="Ja" class="bg-neutral-800">{{ __('Ja') }}</option>
-                                <option value="Nee" class="bg-neutral-800">{{ __('Nee, ik heb hulp nodig bij het ontwerp') }}</option>
-                                <option value="Gedeeltelijk" class="bg-neutral-800">{{ __('Gedeeltelijk') }}</option>
-                            </select>
-                        </div>
+                        @endforeach
                     </div>
+                    @endforeach
 
-                    {{-- Vragen voor Aanpassing --}}
-                    <div class="step-questions hidden" data-for="Aanpassing">
-                        <div class="mb-6">
-                            <label class="block text-sm opacity-60 mb-2">{{ __('Wat moet er aangepast worden?') }}</label>
-                            <select name="q_what_change" class="detail-field w-full bg-transparent border-b border-white/20 py-3 text-sm outline-none focus:border-white/60 transition-colors">
-                                <option value="" class="bg-neutral-800" selected>{{ __('Maak een keuze') }}</option>
-                                <option value="Design" class="bg-neutral-800">{{ __('Design / lay-out aanpassen') }}</option>
-                                <option value="Functionaliteit" class="bg-neutral-800">{{ __('Nieuwe functionaliteit toevoegen') }}</option>
-                                <option value="Inhoud" class="bg-neutral-800">{{ __('Inhoud / tekst aanpassen') }}</option>
-                                <option value="Anders" class="bg-neutral-800">{{ __('Anders') }}</option>
-                            </select>
-                        </div>
-                        <div class="mb-6">
-                            <label class="block text-sm opacity-60 mb-2">{{ __('Heeft u een bestaande site?') }}</label>
-                            <select name="q_has_site" class="detail-field w-full bg-transparent border-b border-white/20 py-3 text-sm outline-none focus:border-white/60 transition-colors">
-                                <option value="" class="bg-neutral-800" selected>{{ __('Maak een keuze') }}</option>
-                                <option value="Ja" class="bg-neutral-800">{{ __('Ja, die kan ik laten zien') }}</option>
-                                <option value="Ja_offline" class="bg-neutral-800">{{ __('Ja, maar staat nog niet online') }}</option>
-                                <option value="Nee" class="bg-neutral-800">{{ __('Nee, moet nog gebouwd worden') }}</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    {{-- Vragen voor Bugfixing --}}
-                    <div class="step-questions hidden" data-for="Bugfixing">
-                        <div class="mb-6">
-                            <label class="block text-sm opacity-60 mb-2">{{ __('Waar situeert het probleem zich?') }}</label>
-                            <select name="q_bug_location" class="detail-field w-full bg-transparent border-b border-white/20 py-3 text-sm outline-none focus:border-white/60 transition-colors">
-                                <option value="" class="bg-neutral-800" selected>{{ __('Maak een keuze') }}</option>
-                                <option value="Front-end" class="bg-neutral-800">{{ __('Front-end (weergave / design)') }}</option>
-                                <option value="Back-end" class="bg-neutral-800">{{ __('Back-end (functionaliteit / server)') }}</option>
-                                <option value="Database" class="bg-neutral-800">{{ __('Database') }}</option>
-                                <option value="Weet ik niet / Anders" class="bg-neutral-800">{{ __('Weet ik niet / Anders') }}</option>
-                            </select>
-                        </div>
-                        <div class="mb-6">
-                            <label class="block text-sm opacity-60 mb-2">{{ __('Hoe dringend is het?') }}</label>
-                            <select name="q_urgency" class="detail-field w-full bg-transparent border-b border-white/20 py-3 text-sm outline-none focus:border-white/60 transition-colors">
-                                <option value="" class="bg-neutral-800" selected>{{ __('Maak een keuze') }}</option>
-                                <option value="Zeer dringend" class="bg-neutral-800">{{ __('Zeer dringend (site ligt plat)') }}</option>
-                                <option value="Binnen week" class="bg-neutral-800">{{ __('Binnen een week') }}</option>
-                                <option value="Geen haast" class="bg-neutral-800">{{ __('Geen haast') }}</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    {{-- Vragen voor Optimalisatie --}}
-                    <div class="step-questions hidden" data-for="Optimalisatie">
-                        <div class="mb-6">
-                            <label class="block text-sm opacity-60 mb-2">{{ __('Wat moet geoptimaliseerd worden?') }}</label>
-                            <select name="q_optimize_what" class="detail-field w-full bg-transparent border-b border-white/20 py-3 text-sm outline-none focus:border-white/60 transition-colors">
-                                <option value="" class="bg-neutral-800" selected>{{ __('Maak een keuze') }}</option>
-                                <option value="Snelheid" class="bg-neutral-800">{{ __('Snelheid / laadtijd') }}</option>
-                                <option value="Codekwaliteit" class="bg-neutral-800">{{ __('Codekwaliteit') }}</option>
-                                <option value="Database" class="bg-neutral-800">{{ __('Database optimalisatie') }}</option>
-                                <option value="SEO" class="bg-neutral-800">{{ __('SEO / vindbaarheid') }}</option>
-                                <option value="Anders" class="bg-neutral-800">{{ __('Anders') }}</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    {{-- Vragen voor {{ __('Anders') }} --}}
+                    {{-- Vragen voor Anders --}}
                     <div class="step-questions hidden" data-for="Anders">
-                        <p class="text-sm text-slate-400">Geef in de {{ __('Volgende') }} stap een toelichting van je vraag.</p>
+                        <p class="text-sm text-slate-400">{{ __('Geef in de volgende stap een toelichting van je vraag.') }}</p>
                     </div>
                 </div>
 
@@ -264,13 +251,26 @@
             });
         });
 
-        // Step 2: no auto-advance (user fills in 2 fields, then clicks {{ __('Volgende') }})
+        // Chip selection
+        document.addEventListener('click', (e) => {
+            const chip = e.target.closest('.chip-btn');
+            if (!chip) return;
+            const group = chip.closest('.mb-6');
+            group.querySelectorAll('.chip-btn').forEach(b => {
+                b.classList.remove('border-blue-400/40', 'bg-blue-500/10', 'text-blue-300');
+                b.classList.add('border-white/10', 'bg-white/[0.02]', 'text-slate-300');
+            });
+            chip.classList.remove('border-white/10', 'bg-white/[0.02]', 'text-slate-300');
+            chip.classList.add('border-blue-400/40', 'bg-blue-500/10', 'text-blue-300');
+            group.querySelector('.chip-value').value = chip.dataset.value;
+        });
 
+        // Step 2: no auto-advance
         document.getElementById('nextBtn').addEventListener('click', () => {
             if (currentStep === 2) {
                 const visibleQuestions = document.querySelector('.step-questions:not(.hidden)');
                 if (visibleQuestions) {
-                    const fields = visibleQuestions.querySelectorAll('.detail-field');
+                    const fields = visibleQuestions.querySelectorAll('.chip-value');
                     let allFilled = true;
                     fields.forEach(f => { if (!f.value) allFilled = false; });
                     if (!allFilled) {
@@ -316,7 +316,7 @@
             }
             document.getElementById('step3Error').classList.add('hidden');
             const details = {};
-            document.querySelectorAll('.detail-field').forEach(field => {
+            document.querySelectorAll('.chip-value').forEach(field => {
                 if (field.value) {
                     const label = field.closest('.mb-6')?.querySelector('label')?.textContent?.trim() || field.name;
                     details[field.name] = field.value;
