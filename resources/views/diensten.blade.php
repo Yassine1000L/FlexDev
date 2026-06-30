@@ -12,9 +12,9 @@
                 @php
                     $images = [
                         '01' => 'https://images.unsplash.com/photo-1520085601670-ee14aa5fa3e8?w=600&h=400&fit=crop&auto=format',
-                        '02' => 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&h=400&fit=crop&auto=format',
-                        '03' => 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop&auto=format',
-                        '04' => 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop&auto=format',
+                        '02' => 'https://images.unsplash.com/photo-1489875347897-49f64b51c1f8?w=600&h=400&fit=crop&auto=format',
+                        '03' => 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop&auto=format',
+                        '04' => 'https://images.unsplash.com/photo-1579532537598-459ecdaf39cc?w=600&h=400&fit=crop&auto=format',
                         '05' => 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=400&fit=crop&auto=format',
                         '06' => 'https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?w=600&h=400&fit=crop&auto=format',
                         '07' => 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&h=400&fit=crop&auto=format',
