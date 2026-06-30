@@ -7,12 +7,7 @@
             <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent"></div>
         </div>
         <div class="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] md:w-[800px] md:h-[800px] rounded-full bg-blue-500/10 blur-[120px] pointer-events-none"></div>
-        <div class="absolute top-1/2 right-0 -translate-y-1/2 translate-x-1/4 opacity-[0.04] pointer-events-none select-none hidden md:block">
-            <svg viewBox="0 0 32 32" class="w-[500px] h-[500px]">
-                <rect width="32" height="32" rx="6" fill="white"/>
-                <text x="16" y="24" text-anchor="middle" fill="black" font-family="system-ui" font-weight="700" font-size="22">F</text>
-            </svg>
-        </div>
+
         <div class="max-w-6xl mx-auto w-full relative z-10">
             <p class="text-sm text-slate-400 mb-6 tracking-widest uppercase">{{ __('Developer & Probleemoplosser') }}</p>
             <h1 class="text-4xl sm:text-7xl md:text-9xl font-bold tracking-tight leading-none">
