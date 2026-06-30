@@ -28,9 +28,9 @@
                     <p class="text-sm text-slate-400 leading-relaxed">{{ __('Code propre desc') }}</p>
                 </div>
 
-                <div class="rounded-2xl border border-white/10 bg-gradient-to-br from-emerald-500/5 to-transparent p-8 hover:border-emerald-400/30 hover:shadow-[0_0_40px_rgba(52,211,153,0.12)] transition-all duration-500" style="animation: fadeUp 0.6s ease-out 0.4s both">
-                    <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-500 to-emerald-600 flex items-center justify-center mb-5 shadow-lg shadow-emerald-500/20">
-                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+                <div class="rounded-2xl border border-white/10 bg-gradient-to-br from-rose-500/5 to-transparent p-8 hover:border-rose-400/30 hover:shadow-[0_0_40px_rgba(244,63,94,0.12)] transition-all duration-500" style="animation: fadeLeft 0.6s ease-out 0.8s both">
+                    <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-rose-500 to-rose-600 flex items-center justify-center mb-5 shadow-lg shadow-rose-500/20">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                     </div>
                     <h3 class="text-lg font-semibold mb-2">{{ __('Compatible mobile') }}</h3>
                     <p class="text-sm text-slate-400 leading-relaxed">{{ __('Compatible mobile desc') }}</p>
@@ -44,9 +44,9 @@
                     <p class="text-sm text-slate-400 leading-relaxed">{{ __('Support desc') }}</p>
                 </div>
 
-                <div class="rounded-2xl border border-white/10 bg-gradient-to-br from-rose-500/5 to-transparent p-8 hover:border-rose-400/30 hover:shadow-[0_0_40px_rgba(244,63,94,0.12)] transition-all duration-500" style="animation: fadeLeft 0.6s ease-out 0.8s both">
-                    <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-rose-500 to-rose-600 flex items-center justify-center mb-5 shadow-lg shadow-rose-500/20">
-                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                <div class="rounded-2xl border border-white/10 bg-gradient-to-br from-emerald-500/5 to-transparent p-8 hover:border-emerald-400/30 hover:shadow-[0_0_40px_rgba(52,211,153,0.12)] transition-all duration-500" style="animation: fadeUp 0.6s ease-out 0.4s both">
+                    <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-500 to-emerald-600 flex items-center justify-center mb-5 shadow-lg shadow-emerald-500/20">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
                     </div>
                     <h3 class="text-lg font-semibold mb-2">{{ __('Tarifs compétitifs') }}</h3>
                     <p class="text-sm text-slate-400 leading-relaxed">{{ __('Tarifs desc') }}</p>
