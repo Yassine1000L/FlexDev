@@ -30,18 +30,22 @@
             </div>
             <div class="mt-20 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl animate">
                 <div class="rounded-xl border border-blue-500/10 bg-blue-500/5 p-5 text-center hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(59,130,246,0.12)] transition-all duration-300">
+                    <svg class="w-6 h-6 mx-auto mb-2 text-blue-400/60" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                     <span class="text-2xl font-bold text-blue-400">5+</span>
                     <p class="text-xs text-slate-400 mt-1">{{ __('Projecten gerealiseerd') }}</p>
                 </div>
                 <div class="rounded-xl border border-blue-500/10 bg-blue-500/5 p-5 text-center hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(59,130,246,0.12)] transition-all duration-300">
+                    <svg class="w-6 h-6 mx-auto mb-2 text-blue-400/60" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                     <span class="text-2xl font-bold text-blue-400">3+</span>
                     <p class="text-xs text-slate-400 mt-1">{{ __('Jaar ervaring') }}</p>
                 </div>
                 <div class="rounded-xl border border-blue-500/10 bg-blue-500/5 p-5 text-center hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(59,130,246,0.12)] transition-all duration-300">
+                    <svg class="w-6 h-6 mx-auto mb-2 text-blue-400/60" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"/></svg>
                     <span class="text-2xl font-bold text-blue-400">100%</span>
                     <p class="text-xs text-slate-400 mt-1">{{ __('Tevreden klanten') }}</p>
                 </div>
                 <div class="rounded-xl border border-blue-500/10 bg-blue-500/5 p-5 text-center hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(59,130,246,0.12)] transition-all duration-300">
+                    <svg class="w-6 h-6 mx-auto mb-2 text-blue-400/60" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
                     <span class="text-2xl font-bold text-blue-400">24u</span>
                     <p class="text-xs text-slate-400 mt-1">{{ __('Reactietijd') }}</p>
                 </div>
