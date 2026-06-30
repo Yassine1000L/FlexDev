@@ -82,13 +82,9 @@
         <div class="flex flex-col gap-1">
             @php $links = [['route' => 'diensten', 'label' => __('Diensten')], ['route' => 'waarom', 'label' => __('Waarom')], ['route' => 'hoe-ik-werk', 'label' => __('Werkwijze')], ['route' => 'projecten', 'label' => __('Projecten')], ['route' => 'contact', 'label' => __('Contact')]]; @endphp
             @foreach ($links as $link)
-                @php $active = request()->routeIs($link['route']); @endphp
-                <a href="{{ route($link['route']) }}" class="relative block px-4 py-3 rounded-xl text-sm font-medium transition-colors {{ $active ? 'text-white bg-white/10' : 'text-slate-400 hover:text-white hover:bg-white/5' }}">
-                    {{ $link['label'] }}
-                    @if ($active)
-                    <span class="absolute bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full bg-blue-400"></span>
-                    @endif
-                </a>
+            <a href="{{ route($link['route']) }}" class="block px-4 py-3 rounded-xl text-sm font-medium text-slate-300 hover:text-white hover:bg-white/5 transition-colors">
+                {{ $link['label'] }}
+            </a>
             @endforeach
         </div>
     </div>
