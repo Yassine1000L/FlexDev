@@ -1,25 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
   <defs>
-    <linearGradient id="bg" x1="0.5" y1="0" x2="0.5" y2="1">
-      <stop offset="0%" stop-color="#0A1020"/>
-      <stop offset="100%" stop-color="#060C18"/>
-    </linearGradient>
-    <linearGradient id="fBlue" x1="0.3" y1="0" x2="0.7" y2="1">
-      <stop offset="0%" stop-color="#2BB5FF"/>
-      <stop offset="25%" stop-color="#0090FF"/>
-      <stop offset="55%" stop-color="#0060DD"/>
-      <stop offset="100%" stop-color="#003399"/>
-    </linearGradient>
-    <linearGradient id="dSilver" x1="0.3" y1="0" x2="0.7" y2="1">
-      <stop offset="0%" stop-color="#FFFFFF"/>
-      <stop offset="30%" stop-color="#E0E0E0"/>
-      <stop offset="65%" stop-color="#A0A0A0"/>
-      <stop offset="100%" stop-color="#606060"/>
+    <linearGradient id="grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#3B82F6"/>
+      <stop offset="100%" stop-color="#1D4ED8"/>
     </linearGradient>
   </defs>
-  <rect width="512" height="512" fill="url(#bg)"/>
-  <!-- Blue F: modern angular with rounded top-left corner -->
-  <path d="M108 55 Q108 30 135 30 L290 30 L270 150 L160 150 L160 280 L280 280 L280 320 L160 320 L160 470 L108 470 Z" fill="url(#fBlue)"/>
-  <!-- Silver D: overlapping right side -->
-  <path d="M230 90 C230 35 280 5 350 5 L430 5 L430 470 L195 470 C138 470 100 408 100 340 C100 270 138 198 195 132 Z" fill="url(#dSilver)"/>
+  <rect width="200" height="200" rx="40" fill="url(#grad)"/>
+  <text x="56" y="135" font-family="Inter, system-ui, sans-serif" font-weight="700" font-size="100" fill="white" letter-spacing="-5">F</text>
+  <text x="105" y="135" font-family="Inter, system-ui, sans-serif" font-weight="300" font-size="100" fill="white" opacity="0.6" letter-spacing="-5">D</text>
 </svg>
