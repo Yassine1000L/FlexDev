@@ -29,16 +29,16 @@
     <nav class="fixed top-0 left-0 right-0 z-50 px-4 md:px-10 py-5 flex items-center justify-between bg-gradient-to-b from-slate-900/80 to-slate-900/40 backdrop-blur-2xl border-b border-white/5 shadow-[0_4px_30px_rgba(0,0,0,0.3)]">
         <a href="{{ route('home') }}" class="flex items-center gap-2.5 group">
             <div class="relative">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" class="w-8 h-8 shrink-0">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-8 h-8 shrink-0">
                 <defs>
-                    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#080D1A"/><stop offset="100%" stop-color="#0B1426"/></linearGradient>
-                    <linearGradient id="blueGrad" x1="0" y1="0" x2="0.5" y2="1"><stop offset="0%" stop-color="#0099FF"/><stop offset="100%" stop-color="#0044CC"/></linearGradient>
-                    <linearGradient id="silverGrad" x1="0" y1="0" x2="0.8" y2="1"><stop offset="0%" stop-color="#FFFFFF"/><stop offset="50%" stop-color="#E8E8E8"/><stop offset="100%" stop-color="#999999"/></linearGradient>
-                    <clipPath id="fClip"><rect x="0" y="0" width="108" height="200"/></clipPath>
+                    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#060C18"/><stop offset="100%" stop-color="#0B1628"/></linearGradient>
+                    <linearGradient id="blue" x1="0" y1="0" x2="0.3" y2="1"><stop offset="0%" stop-color="#1A9FFF"/><stop offset="40%" stop-color="#0066FF"/><stop offset="100%" stop-color="#0033CC"/></linearGradient>
+                    <linearGradient id="silver" x1="0.2" y1="0" x2="0.8" y2="1"><stop offset="0%" stop-color="#FFFFFF"/><stop offset="40%" stop-color="#E0E0E0"/><stop offset="100%" stop-color="#888888"/></linearGradient>
                 </defs>
-                <rect width="200" height="200" fill="url(#bgGrad)"/>
-                <g clip-path="url(#fClip)"><path d="M30 30 L30 170 L55 170 L55 110 L90 110 L90 88 L55 88 L55 60 L100 60 L100 30 Z" fill="url(#blueGrad)"/></g>
-                <path d="M78 48 C78 24 98 14 118 14 L155 14 L155 170 L85 170 C62 170 48 152 48 132 C48 112 62 88 78 72 Z" fill="url(#silverGrad)"/>
+                <rect width="512" height="512" fill="url(#bg)"/>
+                <path d="M80 60 L80 450 L140 450 L140 300 L240 300 L240 260 L140 260 L140 160 L270 160 L270 60 Z" fill="url(#blue)"/>
+                <path d="M200 100 C200 48 250 20 310 20 L420 20 L420 450 L180 450 C130 450 100 400 100 340 C100 280 130 210 200 160 Z" fill="url(#silver)"/>
+                <path d="M220 180 L260 180 L260 150 L220 150 Z" fill="#0B1628"/>
             </svg>
                 <div class="absolute -inset-1 bg-blue-400/20 rounded-full blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             </div>
