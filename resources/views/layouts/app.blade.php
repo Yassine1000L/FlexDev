@@ -29,7 +29,7 @@
     <nav class="fixed top-0 left-0 right-0 z-50 px-4 md:px-10 py-5 flex items-center justify-between bg-gradient-to-b from-slate-900/80 to-slate-900/40 backdrop-blur-2xl border-b border-white/5 shadow-[0_4px_30px_rgba(0,0,0,0.3)]">
         <a href="{{ route('home') }}" class="flex items-center gap-2.5 group">
             <div class="relative">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 120" class="w-7 h-7 shrink-0">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 120" class="w-9 h-9 shrink-0">
                 <text x="8" y="102" font-family="Inter, system-ui, sans-serif" font-weight="800" font-size="120" fill="#3B82F6" letter-spacing="-8">F</text>
                 <text x="75" y="102" font-family="Inter, system-ui, sans-serif" font-weight="600" font-size="120" fill="#94A3B8" letter-spacing="-8">D</text>
             </svg>
