@@ -29,16 +29,9 @@
     <nav class="fixed top-0 left-0 right-0 z-50 px-4 md:px-10 py-5 flex items-center justify-between bg-gradient-to-b from-slate-900/80 to-slate-900/40 backdrop-blur-2xl border-b border-white/5 shadow-[0_4px_30px_rgba(0,0,0,0.3)]">
         <a href="{{ route('home') }}" class="flex items-center gap-2.5 group">
             <div class="relative">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" class="w-7 h-7 shrink-0">
-                <defs>
-                    <linearGradient id="grad" x1="0" y1="0" x2="1" y2="1">
-                        <stop offset="0%" stop-color="#3B82F6"/>
-                        <stop offset="100%" stop-color="#1D4ED8"/>
-                    </linearGradient>
-                </defs>
-                <rect width="200" height="200" rx="40" fill="url(#grad)"/>
-                <text x="56" y="135" font-family="Inter, system-ui, sans-serif" font-weight="700" font-size="100" fill="white" letter-spacing="-5">F</text>
-                <text x="105" y="135" font-family="Inter, system-ui, sans-serif" font-weight="300" font-size="100" fill="white" opacity="0.6" letter-spacing="-5">D</text>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 140" class="w-7 h-7 shrink-0">
+                <text x="8" y="120" font-family="Inter, system-ui, sans-serif" font-weight="700" font-size="120" fill="#3B82F6" letter-spacing="-8">F</text>
+                <text x="75" y="120" font-family="Inter, system-ui, sans-serif" font-weight="300" font-size="120" fill="#94A3B8" letter-spacing="-8">D</text>
             </svg>
                 <div class="absolute -inset-1 bg-blue-400/20 rounded-full blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             </div>
