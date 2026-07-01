@@ -35,7 +35,7 @@
             </svg>
                 <div class="absolute -inset-1 bg-blue-400/20 rounded-full blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             </div>
-            <span class="w-px h-5 bg-white/10 hidden sm:block"></span>
+            <span class="w-px h-4 bg-white/10 hidden sm:block self-center"></span>
             <span class="hidden sm:block text-sm font-semibold tracking-tight text-slate-100">Flex Dev</span>
         </a>
 
