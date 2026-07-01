@@ -30,8 +30,8 @@
         <a href="{{ route('home') }}" class="flex items-center gap-2.5 group">
             <div class="relative">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 140" class="w-7 h-7 shrink-0">
-                <text x="8" y="120" font-family="Inter, system-ui, sans-serif" font-weight="700" font-size="120" fill="#3B82F6" letter-spacing="-8">F</text>
-                <text x="75" y="120" font-family="Inter, system-ui, sans-serif" font-weight="300" font-size="120" fill="#94A3B8" letter-spacing="-8">D</text>
+                <text x="8" y="120" font-family="Inter, system-ui, sans-serif" font-weight="800" font-size="120" fill="#3B82F6" letter-spacing="-8">F</text>
+                <text x="75" y="120" font-family="Inter, system-ui, sans-serif" font-weight="600" font-size="120" fill="#94A3B8" letter-spacing="-8">D</text>
             </svg>
                 <div class="absolute -inset-1 bg-blue-400/20 rounded-full blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             </div>
