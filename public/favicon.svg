@@ -1,17 +1,27 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
   <defs>
-    <linearGradient id="blueGrad" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#0055CC"/>
-      <stop offset="100%" stop-color="#00AAFF"/>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#080D1A"/>
+      <stop offset="100%" stop-color="#0B1426"/>
     </linearGradient>
-    <linearGradient id="silverGrad" x1="0" y1="0" x2="1" y2="1">
+    <linearGradient id="blueGrad" x1="0" y1="0" x2="0.5" y2="1">
+      <stop offset="0%" stop-color="#0099FF"/>
+      <stop offset="100%" stop-color="#0044CC"/>
+    </linearGradient>
+    <linearGradient id="silverGrad" x1="0" y1="0" x2="0.8" y2="1">
       <stop offset="0%" stop-color="#FFFFFF"/>
-      <stop offset="100%" stop-color="#C0C0C0"/>
+      <stop offset="50%" stop-color="#E8E8E8"/>
+      <stop offset="100%" stop-color="#999999"/>
     </linearGradient>
+    <clipPath id="fClip">
+      <rect x="0" y="0" width="108" height="200"/>
+    </clipPath>
   </defs>
-  <rect width="128" height="128" rx="24" fill="#0B1426"/>
-  <!-- Blue F -->
-  <path d="M22 18 L60 18 L60 32 L38 32 L38 52 L58 52 L58 66 L38 66 L38 110 L16 110 L16 18 Z" fill="url(#blueGrad)" opacity="0.95"/>
-  <!-- Silver D -->
-  <path d="M52 30 C52 16 68 12 82 12 L110 12 L110 110 L58 110 C44 110 36 98 36 85 C36 70 44 55 52 42 Z" fill="url(#silverGrad)" opacity="0.85"/>
+  <rect width="200" height="200" fill="url(#bgGrad)"/>
+  <!-- Blue F shape -->
+  <g clip-path="url(#fClip)">
+    <path d="M30 30 L30 170 L55 170 L55 110 L90 110 L90 88 L55 88 L55 60 L100 60 L100 30 Z" fill="url(#blueGrad)"/>
+  </g>
+  <!-- Silver D shape overlapping -->
+  <path d="M78 48 C78 24 98 14 118 14 L155 14 L155 170 L85 170 C62 170 48 152 48 132 C48 112 62 88 78 72 Z" fill="url(#silverGrad)"/>
 </svg>
