@@ -29,16 +29,16 @@
     <nav class="fixed top-0 left-0 right-0 z-50 px-4 md:px-10 py-5 flex items-center justify-between bg-gradient-to-b from-slate-900/80 to-slate-900/40 backdrop-blur-2xl border-b border-white/5 shadow-[0_4px_30px_rgba(0,0,0,0.3)]">
         <a href="{{ route('home') }}" class="flex items-center gap-2.5 group">
             <div class="relative">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-8 h-8 shrink-0">
-                    <defs>
-                        <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#050B18"/><stop offset="100%" stop-color="#0B1426"/></linearGradient>
-                        <linearGradient id="blue" x1="0" y1="0" x2="0.4" y2="1"><stop offset="0%" stop-color="#1EAFFF"/><stop offset="35%" stop-color="#0077FF"/><stop offset="100%" stop-color="#003DAA"/></linearGradient>
-                        <linearGradient id="silver" x1="0.3" y1="0" x2="0.9" y2="1"><stop offset="0%" stop-color="#FFFFFF"/><stop offset="35%" stop-color="#E8E8E8"/><stop offset="70%" stop-color="#AAAAAA"/><stop offset="100%" stop-color="#777777"/></linearGradient>
-                    </defs>
-                    <rect width="512" height="512" fill="url(#bg)"/>
-                    <path d="M80 55 L80 455 L155 455 L155 310 L260 310 L260 265 L155 265 L155 155 L285 155 L285 55 Z" fill="url(#blue)"/>
-                    <path d="M210 80 C210 38 255 12 320 12 L425 12 L430 12 L430 455 L175 455 C125 455 92 405 92 338 C92 270 125 200 175 148 Z" fill="url(#silver)"/>
-                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" class="w-7 h-7 shrink-0">
+                <defs>
+                    <linearGradient id="logoGrad" x1="0" y1="0" x2="1" y2="1">
+                        <stop offset="0%" stop-color="#60a5fa"/>
+                        <stop offset="100%" stop-color="#a78bfa"/>
+                    </linearGradient>
+                </defs>
+                <rect width="32" height="32" rx="7" fill="url(#logoGrad)" opacity="0.9"/>
+                <text x="16" y="22" text-anchor="middle" fill="white" font-family="system-ui" font-weight="700" font-size="18">F</text>
+            </svg>
                 <div class="absolute -inset-1 bg-blue-400/20 rounded-full blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             </div>
             <span class="hidden sm:block text-sm font-semibold tracking-tight text-slate-100">Flex Dev</span>
