@@ -30,16 +30,15 @@
         <a href="{{ route('home') }}" class="flex items-center gap-2.5 group">
             <div class="relative">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-8 h-8 shrink-0">
-                <defs>
-                    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#060C18"/><stop offset="100%" stop-color="#0B1628"/></linearGradient>
-                    <linearGradient id="blue" x1="0" y1="0" x2="0.3" y2="1"><stop offset="0%" stop-color="#1A9FFF"/><stop offset="40%" stop-color="#0066FF"/><stop offset="100%" stop-color="#0033CC"/></linearGradient>
-                    <linearGradient id="silver" x1="0.2" y1="0" x2="0.8" y2="1"><stop offset="0%" stop-color="#FFFFFF"/><stop offset="40%" stop-color="#E0E0E0"/><stop offset="100%" stop-color="#888888"/></linearGradient>
-                </defs>
-                <rect width="512" height="512" fill="url(#bg)"/>
-                <path d="M80 60 L80 450 L140 450 L140 300 L240 300 L240 260 L140 260 L140 160 L270 160 L270 60 Z" fill="url(#blue)"/>
-                <path d="M200 100 C200 48 250 20 310 20 L420 20 L420 450 L180 450 C130 450 100 400 100 340 C100 280 130 210 200 160 Z" fill="url(#silver)"/>
-                <path d="M220 180 L260 180 L260 150 L220 150 Z" fill="#0B1628"/>
-            </svg>
+                    <defs>
+                        <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#050B18"/><stop offset="100%" stop-color="#0B1426"/></linearGradient>
+                        <linearGradient id="blue" x1="0" y1="0" x2="0.4" y2="1"><stop offset="0%" stop-color="#1EAFFF"/><stop offset="35%" stop-color="#0077FF"/><stop offset="100%" stop-color="#003DAA"/></linearGradient>
+                        <linearGradient id="silver" x1="0.3" y1="0" x2="0.9" y2="1"><stop offset="0%" stop-color="#FFFFFF"/><stop offset="35%" stop-color="#E8E8E8"/><stop offset="70%" stop-color="#AAAAAA"/><stop offset="100%" stop-color="#777777"/></linearGradient>
+                    </defs>
+                    <rect width="512" height="512" fill="url(#bg)"/>
+                    <path d="M80 55 L80 455 L155 455 L155 310 L260 310 L260 265 L155 265 L155 155 L285 155 L285 55 Z" fill="url(#blue)"/>
+                    <path d="M210 80 C210 38 255 12 320 12 L425 12 L430 12 L430 455 L175 455 C125 455 92 405 92 338 C92 270 125 200 175 148 Z" fill="url(#silver)"/>
+                </svg>
                 <div class="absolute -inset-1 bg-blue-400/20 rounded-full blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             </div>
             <span class="hidden sm:block text-sm font-semibold tracking-tight text-slate-100">Flex Dev</span>
