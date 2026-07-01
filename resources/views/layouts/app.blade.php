@@ -29,15 +29,10 @@
     <nav class="fixed top-0 left-0 right-0 z-50 px-4 md:px-10 py-5 flex items-center justify-between bg-gradient-to-b from-slate-900/80 to-slate-900/40 backdrop-blur-2xl border-b border-white/5 shadow-[0_4px_30px_rgba(0,0,0,0.3)]">
         <a href="{{ route('home') }}" class="flex items-center gap-2.5 group">
             <div class="relative">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" class="w-8 h-8 shrink-0">
-                    <defs>
-                        <linearGradient id="logoGrad" x1="0" y1="0" x2="1" y2="1">
-                            <stop offset="0%" stop-color="#60a5fa"/>
-                            <stop offset="100%" stop-color="#a78bfa"/>
-                        </linearGradient>
-                    </defs>
-                    <rect width="32" height="32" rx="7" fill="url(#logoGrad)" opacity="0.9"/>
-                    <text x="16" y="22" text-anchor="middle" fill="white" font-family="system-ui" font-weight="700" font-size="18">F</text>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" class="w-8 h-8 shrink-0">
+                    <rect width="128" height="128" rx="24" fill="#0B1426"/>
+                    <path d="M22 18 L60 18 L60 32 L38 32 L38 52 L58 52 L58 66 L38 66 L38 110 L16 110 L16 18 Z" fill="#0088FF"/>
+                    <path d="M52 30 C52 16 68 12 82 12 L110 12 L110 110 L58 110 C44 110 36 98 36 85 C36 70 44 55 52 42 Z" fill="white" opacity="0.85"/>
                 </svg>
                 <div class="absolute -inset-1 bg-blue-400/20 rounded-full blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             </div>
