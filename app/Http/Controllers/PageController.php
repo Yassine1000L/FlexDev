@@ -50,6 +50,11 @@ class PageController extends Controller
         return view('admin', compact('messages'));
     }
 
+    public function metiBarber()
+    {
+        return view('meti-barber');
+    }
+
     public function contactStore(Request $request)
     {
         $data = $request->validate([

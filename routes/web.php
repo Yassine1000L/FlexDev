@@ -18,3 +18,4 @@ Route::get('taal/{locale}', function ($locale) {
     return redirect()->back();
 })->name('taal');
 Route::get('admin/{secret?}', [PageController::class, 'admin'])->name('admin');
+Route::get('meti-barber', [PageController::class, 'metiBarber'])->name('meti-barber');
