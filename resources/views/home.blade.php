@@ -58,7 +58,7 @@
     </section>
 
     {{-- Diensten --}}
-    <section id="diensten" class="py-28 px-6 bg-slate-900/30">
+    <section id="diensten" class="py-28 px-6">
         <div class="max-w-6xl mx-auto">
             <p class="text-sm text-slate-400 mb-4 tracking-widest uppercase text-center">{{ __('Wat Ik Doe') }}</p>
             <h2 class="text-3xl md:text-6xl font-bold tracking-tight mb-16 text-center">{{ __('Diensten') }}</h2>
@@ -131,7 +131,7 @@
     </section>
 
     {{-- Proces --}}
-    <section id="proces" class="py-28 px-6 bg-slate-900/30 relative overflow-hidden">
+    <section id="proces" class="py-28 px-6 relative overflow-hidden">
         <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] rounded-full bg-blue-500/5 blur-[120px] pointer-events-none"></div>
         <div class="max-w-4xl mx-auto relative z-10">
             <p class="text-sm text-slate-400 mb-4 tracking-widest uppercase text-center">{{ __('Werkwijze') }}</p>
@@ -191,7 +191,7 @@
     </section>
 
     {{-- Contact --}}
-    <section id="contact" class="py-28 px-6 bg-slate-900/30">
+    <section id="contact" class="py-28 px-6">
         <div class="max-w-3xl mx-auto">
             <p class="text-sm text-slate-400 mb-4 tracking-widest uppercase text-center">{{ __('Laten we Praten') }}</p>
             <h2 class="text-3xl md:text-6xl font-bold tracking-tight mb-4 text-center">{{ __('Laten we jouw project bespreken') }}</h2>
