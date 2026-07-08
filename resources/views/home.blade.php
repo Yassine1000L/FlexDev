@@ -1,13 +1,13 @@
 @extends('layouts.app')
 
 @section('content')
+    {{-- Hero --}}
     <section class="min-h-screen flex flex-col justify-center px-6 pt-28 relative overflow-hidden">
         <div class="absolute inset-0 pointer-events-none overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1920&q=80" alt="" class="w-full h-full object-cover opacity-[0.25] md:opacity-[0.25] blur-sm md:scale-105">
+            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1920&q=80" alt="" class="w-full h-full object-cover opacity-[0.2] md:opacity-[0.25] blur-sm md:scale-105">
             <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent"></div>
         </div>
         <div class="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] md:w-[800px] md:h-[800px] rounded-full bg-blue-500/10 blur-[120px] pointer-events-none"></div>
-
         <div class="max-w-6xl mx-auto w-full relative z-10">
             <p class="text-sm text-slate-400 mb-6 tracking-widest uppercase">{{ __('Developer & Probleemoplosser') }}</p>
             <h1 class="text-4xl sm:text-7xl md:text-9xl font-bold tracking-tight leading-none">
@@ -18,16 +18,21 @@
                 {{ __('Realisatie van WebDevelopement - met onderhoud, aanpassingen, optimalisatie en bugfixing.') }}
             </p>
             <div class="mt-10 flex flex-col sm:flex-row gap-4">
-                <a href="{{ route('contact') }}" class="inline-flex items-center px-8 py-3 bg-blue-600 text-white text-sm font-medium rounded-full hover:bg-blue-500 transition-all shadow-lg shadow-blue-500/20">{{ __('Neem contact op') }}</a>
-                <a href="{{ route('projecten') }}" class="inline-flex items-center px-8 py-3 border border-blue-500/30 text-sm font-medium rounded-full hover:border-blue-400/60 hover:bg-blue-500/5 transition-all">{{ __('Bekijk mijn werk') }}</a>
+                <a href="#contact" class="inline-flex items-center px-8 py-3 bg-blue-600 text-white text-sm font-medium rounded-full hover:bg-blue-500 transition-all shadow-lg shadow-blue-500/20">{{ __('Vraag gratis offerte aan') }}</a>
+                <a href="#projecten" class="inline-flex items-center px-8 py-3 border border-blue-500/30 text-sm font-medium rounded-full hover:border-blue-400/60 hover:bg-blue-500/5 transition-all">{{ __('Bekijk mijn werk') }}</a>
             </div>
-            <div class="mt-16 max-w-2xl">
-                <h2 class="text-lg md:text-2xl font-semibold tracking-tight mb-4">{{ __('Over Flex Dev') }}</h2>
-                <p class="text-base text-slate-300 leading-relaxed">
-                    {{ __('Flex Dev staat voor de ontwikkeling en optimalisatie van webapplicaties en websites. Van het bouwen van maatwerk-platforms tot het doorvoeren van gerichte aanpassingen en het oplossen van complexe technische vraagstukken — elk project wordt uitgevoerd met oog voor kwaliteit, performantie en gebruiksgemak. Mijn aanpak is gestructureerd, transparant en gericht op een duurzaam resultaat.') }}
-                </p>
-            </div>
-            <div class="mt-20 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl">
+        </div>
+    </section>
+
+    {{-- Over --}}
+    <section id="over" class="py-28 px-6">
+        <div class="max-w-4xl mx-auto">
+            <p class="text-sm text-slate-400 mb-4 tracking-widest uppercase text-center">{{ __('Wat Ik Doe') }}</p>
+            <h2 class="text-3xl md:text-6xl font-bold tracking-tight mb-8 text-center">{{ __('Over Flex Dev') }}</h2>
+            <p class="text-base text-slate-300 max-w-2xl mx-auto text-center leading-relaxed">
+                {{ __('Flex Dev staat voor de ontwikkeling en optimalisatie van webapplicaties en websites. Van het bouwen van maatwerk-platforms tot het doorvoeren van gerichte aanpassingen en het oplossen van complexe technische vraagstukken — elk project wordt uitgevoerd met oog voor kwaliteit, performantie en gebruiksgemak.') }}
+            </p>
+            <div class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto">
                 <div class="rounded-xl border border-blue-500/10 bg-blue-500/5 p-5 text-center hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(59,130,246,0.12)] transition-all duration-300">
                     <svg class="w-6 h-6 mx-auto mb-2 text-blue-400/60" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                     <span class="text-2xl font-bold text-blue-400">5+</span>
@@ -49,78 +54,210 @@
                     <p class="text-xs text-slate-400 mt-1">{{ __('Reactietijd') }}</p>
                 </div>
             </div>
-            <div class="mt-20 max-w-3xl mx-auto">
-                <h2 class="text-lg md:text-2xl font-semibold tracking-tight mb-2 text-center">{{ __('Reviews') }}</h2>
-                <p class="text-sm text-slate-400 mb-8 text-center">{{ __('Ils m\'ont fait confiance') }}</p>
-                <div class="grid md:grid-cols-3 gap-4">
-                    <div class="rounded-xl border border-white/5 bg-white/[0.02] p-5 text-center hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(59,130,246,0.08)] transition-all duration-300">
-                        <div class="flex items-center justify-center gap-0.5 mb-3">
-                            <svg class="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                            <svg class="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                            <svg class="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                            <svg class="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                            <svg class="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                        </div>
-                        <p class="text-xs text-slate-400 leading-relaxed">"Flex Dev a entièrement rénové mon site web. Professionnel, rapide et fiable."</p>
-                        <p class="text-xs font-medium text-slate-200 mt-3">— Sarah M.</p>
-                    </div>
-                    <div class="rounded-xl border border-white/5 bg-white/[0.02] p-5 text-center hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(59,130,246,0.08)] transition-all duration-300">
-                        <div class="flex items-center justify-center gap-0.5 mb-3">
-                            <svg class="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                            <svg class="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                            <svg class="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                            <svg class="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                            <svg class="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                        </div>
-                        <p class="text-xs text-slate-400 leading-relaxed">"Snelle communicatie en topresultaat. Mijn bedrijfssite werkt nu perfect op alle apparaten."</p>
-                        <p class="text-xs font-medium text-slate-200 mt-3">— Tom V.</p>
-                    </div>
-                    <div class="rounded-xl border border-white/5 bg-white/[0.02] p-5 text-center hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(59,130,246,0.08)] transition-all duration-300">
-                        <div class="flex items-center justify-center gap-0.5 mb-3">
-                            <svg class="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                            <svg class="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                            <svg class="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                            <svg class="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                            <svg class="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                        </div>
-                        <p class="text-xs text-slate-400 leading-relaxed">"Dankzij Flex Dev is mijn website nu eindelijk mobiel-vriendelijk. Echt een aanrader!"</p>
-                        <p class="text-xs font-medium text-slate-200 mt-3">— Lisa K.</p>
+        </div>
+    </section>
+
+    {{-- Diensten --}}
+    <section id="diensten" class="py-28 px-6 bg-slate-900/30">
+        <div class="max-w-6xl mx-auto">
+            <p class="text-sm text-slate-400 mb-4 tracking-widest uppercase text-center">{{ __('Wat Ik Doe') }}</p>
+            <h2 class="text-3xl md:text-6xl font-bold tracking-tight mb-16 text-center">{{ __('Diensten') }}</h2>
+            <div class="max-w-3xl mx-auto space-y-8">
+                @php $services = [
+                    ['nr' => '01', 'title' => __('Webontwikkeling'), 'desc' => __('Moderne, responsive websites en webapplicaties bouwen met Laravel, PHP en Tailwind CSS.')],
+                    ['nr' => '02', 'title' => __('Bugfixing'), 'desc' => __('Problemen opsporen en oplossen in bestaande codebases.')],
+                    ['nr' => '03', 'title' => __('Prestatieoptimalisatie'), 'desc' => __('Trage applicaties versnellen en gebruikerservaring verbeteren.')],
+                    ['nr' => '04', 'title' => __('SEO Optimalisatie'), 'desc' => __('Je website beter vindbaar maken in Google.')],
+                    ['nr' => '05', 'title' => __('Onderhoud & Support'), 'desc' => __('Maandelijks beheer, updates, back-ups en veiligheid.')],
+                    ['nr' => '06', 'title' => __('Responsive Fix'), 'desc' => __('Bestaande sites mobiel-vriendelijk maken.')],
+                ]; @endphp
+                @foreach ($services as $svc)
+                <div class="flex items-start gap-4 rounded-2xl border border-white/5 bg-white/[0.02] p-6 hover:border-blue-500/20 hover:shadow-[0_0_30px_rgba(59,130,246,0.06)] transition-all">
+                    <span class="text-lg font-bold text-blue-400/60 shrink-0 w-8">{{ $svc['nr'] }}</span>
+                    <div>
+                        <h3 class="text-lg font-semibold">{{ $svc['title'] }}</h3>
+                        <p class="text-sm text-slate-400 mt-1">{{ $svc['desc'] }}</p>
                     </div>
                 </div>
+                @endforeach
             </div>
-            <div class="mt-20 max-w-3xl">
-                <h2 class="text-lg md:text-2xl font-semibold tracking-tight mb-6 md:mb-8">{{ __('Technologieën') }}</h2>
-                <div class="flex flex-wrap gap-x-6 gap-y-3">
-                    <div class="flex items-center gap-2 text-slate-300 hover:opacity-80 hover:-translate-y-0.5 transition-all duration-300 whitespace-nowrap">
-                        <svg viewBox="0 0 64 64" class="w-5 h-5 shrink-0"><circle cx="32" cy="32" r="30" fill="none" stroke="white" stroke-width="2"/><text x="32" y="39" text-anchor="middle" fill="white" font-family="system-ui" font-weight="600" font-size="14">P</text></svg>
-                        <span class="text-xs opacity-70">PHP</span>
-                    </div>
-                    <div class="flex items-center gap-2 text-slate-300 hover:opacity-80 hover:-translate-y-0.5 transition-all duration-300 whitespace-nowrap">
-                        <svg viewBox="0 0 64 64" class="w-5 h-5 shrink-0"><rect x="2" y="2" width="60" height="60" rx="8" fill="none" stroke="white" stroke-width="2"/><text x="32" y="39" text-anchor="middle" fill="white" font-family="system-ui" font-weight="600" font-size="10">L</text></svg>
-                        <span class="text-xs opacity-70">Laravel</span>
-                    </div>
-                    <div class="flex items-center gap-2 text-slate-300 hover:opacity-80 hover:-translate-y-0.5 transition-all duration-300 whitespace-nowrap">
-                        <svg viewBox="0 0 64 64" class="w-5 h-5 shrink-0"><path d="M8 8 L56 8 L56 48 L32 60 L8 48 Z" fill="none" stroke="white" stroke-width="2"/><text x="32" y="39" text-anchor="middle" fill="white" font-family="system-ui" font-weight="600" font-size="9">T</text></svg>
-                        <span class="text-xs opacity-70">Tailwind</span>
-                    </div>
-                    <div class="flex items-center gap-2 text-slate-300 hover:opacity-80 hover:-translate-y-0.5 transition-all duration-300 whitespace-nowrap">
-                        <svg viewBox="0 0 64 64" class="w-5 h-5 shrink-0"><rect x="4" y="12" width="56" height="40" rx="4" fill="none" stroke="white" stroke-width="2"/><line x1="4" y1="24" x2="60" y2="24" stroke="white" stroke-width="2"/><line x1="32" y1="24" x2="32" y2="52" stroke="white" stroke-width="2"/></svg>
-                        <span class="text-xs opacity-70">SQLite</span>
-                    </div>
-                    <div class="flex items-center gap-2 text-slate-300 hover:opacity-80 hover:-translate-y-0.5 transition-all duration-300 whitespace-nowrap">
-                        <svg viewBox="0 0 64 64" class="w-5 h-5 shrink-0"><rect x="6" y="6" width="52" height="52" rx="4" fill="none" stroke="white" stroke-width="2"/><text x="32" y="39" text-anchor="middle" fill="white" font-family="system-ui" font-weight="600" font-size="12">JS</text></svg>
-                        <span class="text-xs opacity-70">JavaScript</span>
-                    </div>
-                    <div class="flex items-center gap-2 text-slate-300 hover:opacity-80 hover:-translate-y-0.5 transition-all duration-300 whitespace-nowrap">
-                        <svg viewBox="0 0 64 64" class="w-5 h-5 shrink-0"><path d="M12 10 L52 10 L52 38 L38 38 L38 54 L12 54 Z" fill="none" stroke="white" stroke-width="2"/><text x="32" y="39" text-anchor="middle" fill="white" font-family="system-ui" font-weight="600" font-size="8">HTML</text></svg>
-                        <span class="text-xs opacity-70">HTML/CSS</span>
-                    </div>
-                    <div class="flex items-center gap-2 text-slate-300 hover:opacity-80 hover:-translate-y-0.5 transition-all duration-300 whitespace-nowrap">
-                        <svg viewBox="0 0 64 64" class="w-5 h-5 shrink-0"><circle cx="32" cy="32" r="26" fill="none" stroke="white" stroke-width="2"/><text x="32" y="39" text-anchor="middle" fill="white" font-family="system-ui" font-weight="600" font-size="11">J</text></svg>
-                        <span class="text-xs opacity-70">Java</span>
-                    </div>
+        </div>
+    </section>
+
+    {{-- Waarom --}}
+    <section id="waarom" class="py-28 px-6">
+        <div class="max-w-5xl mx-auto">
+            <p class="text-sm text-slate-400 mb-4 tracking-widest uppercase text-center">{{ __('Pourquoi') }}</p>
+            <h2 class="text-3xl md:text-5xl font-bold tracking-tight mb-4 text-center">{{ __('Waarom Flex Dev') }} ?</h2>
+            <p class="text-base text-slate-300 max-w-2xl mx-auto mb-16 text-center">{{ __('Waarom Flex Dev tekst') }}</p>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="rounded-2xl border border-white/10 bg-gradient-to-br from-blue-500/5 to-transparent p-6 text-center hover:border-blue-400/30 hover:shadow-[0_0_30px_rgba(59,130,246,0.1)] transition-all">
+                    <span class="text-3xl block mb-3">⚡</span>
+                    <h3 class="text-base font-semibold mb-1">{{ __('Réponse sous 24h') }}</h3>
+                    <p class="text-xs text-slate-400">{{ __('Réponse sous 24h desc') }}</p>
+                </div>
+                <div class="rounded-2xl border border-white/10 bg-gradient-to-br from-purple-500/5 to-transparent p-6 text-center hover:border-purple-400/30 hover:shadow-[0_0_30px_rgba(168,85,247,0.1)] transition-all">
+                    <span class="text-3xl block mb-3">💎</span>
+                    <h3 class="text-base font-semibold mb-1">{{ __('Code propre et maintenable') }}</h3>
+                    <p class="text-xs text-slate-400">{{ __('Code propre desc') }}</p>
+                </div>
+                <div class="rounded-2xl border border-white/10 bg-gradient-to-br from-rose-500/5 to-transparent p-6 text-center hover:border-rose-400/30 hover:shadow-[0_0_30px_rgba(244,63,94,0.1)] transition-all">
+                    <span class="text-3xl block mb-3">💰</span>
+                    <h3 class="text-base font-semibold mb-1">{{ __('Tarifs compétitifs') }}</h3>
+                    <p class="text-xs text-slate-400">{{ __('Tarifs desc') }}</p>
+                </div>
+                <div class="rounded-2xl border border-white/10 bg-gradient-to-br from-amber-500/5 to-transparent p-6 text-center hover:border-amber-400/30 hover:shadow-[0_0_30px_rgba(251,191,36,0.1)] transition-all">
+                    <span class="text-3xl block mb-3">🛠</span>
+                    <h3 class="text-base font-semibold mb-1">{{ __('Support après livraison') }}</h3>
+                    <p class="text-xs text-slate-400">{{ __('Support desc') }}</p>
+                </div>
+                <div class="rounded-2xl border border-white/10 bg-gradient-to-br from-emerald-500/5 to-transparent p-6 text-center hover:border-emerald-400/30 hover:shadow-[0_0_30px_rgba(52,211,153,0.1)] transition-all">
+                    <span class="text-3xl block mb-3">📱</span>
+                    <h3 class="text-base font-semibold mb-1">{{ __('Compatible mobile') }}</h3>
+                    <p class="text-xs text-slate-400">{{ __('Compatible mobile desc') }}</p>
+                </div>
+                <div class="rounded-2xl border border-white/10 bg-gradient-to-br from-cyan-500/5 to-transparent p-6 text-center hover:border-cyan-400/30 hover:shadow-[0_0_30px_rgba(34,211,238,0.1)] transition-all">
+                    <span class="text-3xl block mb-3">📋</span>
+                    <h3 class="text-base font-semibold mb-1">{{ __('Devis clair et transparent') }}</h3>
+                    <p class="text-xs text-slate-400">{{ __('Devis desc') }}</p>
                 </div>
             </div>
         </div>
     </section>
+
+    {{-- Proces --}}
+    <section id="proces" class="py-28 px-6 bg-slate-900/30 relative overflow-hidden">
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] rounded-full bg-blue-500/5 blur-[120px] pointer-events-none"></div>
+        <div class="max-w-4xl mx-auto relative z-10">
+            <p class="text-sm text-slate-400 mb-4 tracking-widest uppercase text-center">{{ __('Werkwijze') }}</p>
+            <h2 class="text-3xl md:text-5xl font-bold tracking-tight mb-16 text-center">{{ __('Comment se déroule votre projet') }} ?</h2>
+            @php $steps = [
+                ['nr' => '01', 'icon' => '📞', 'title' => __('Premier contact'), 'desc' => __('Nous discutons de vos besoins et objectifs.')],
+                ['nr' => '02', 'icon' => '📋', 'title' => __('Analyse'), 'desc' => __('Je prépare une proposition détaillée avec planning et budget.')],
+                ['nr' => '03', 'icon' => '💻', 'title' => __('Développement'), 'desc' => __('Je développe votre projet en phases, avec des retours réguliers.')],
+                ['nr' => '04', 'icon' => '🚀', 'title' => __('Mise en ligne'), 'desc' => __('Votre site est publié et prêt à être utilisé.')],
+                ['nr' => '05', 'icon' => '🛠', 'title' => __('Support'), 'desc' => __('Je reste disponible pour toute question ou amélioration.')],
+            ]; @endphp
+            <div class="flex flex-col items-center">
+                @foreach ($steps as $i => $step)
+                <div class="flex items-center gap-4 w-full max-w-lg mb-6">
+                    <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center shadow-lg shadow-blue-500/20 shrink-0">
+                        <span class="text-lg">{{ $step['icon'] }}</span>
+                    </div>
+                    <div class="flex-1">
+                        <span class="text-xs text-blue-400/60 font-medium">{{ $step['nr'] }}</span>
+                        <h3 class="text-base font-semibold">{{ $step['title'] }}</h3>
+                        <p class="text-xs text-slate-400">{{ $step['desc'] }}</p>
+                    </div>
+                </div>
+                @if (!$loop->last)
+                <div class="w-px h-6 border-l border-dashed border-blue-400/30 mb-6"></div>
+                @endif
+                @endforeach
+            </div>
+        </div>
+    </section>
+
+    {{-- Projecten --}}
+    <section id="projecten" class="py-28 px-6">
+        <div class="max-w-5xl mx-auto">
+            <p class="text-sm text-slate-400 mb-4 tracking-widest uppercase text-center">{{ __('Uitgelicht Werk') }}</p>
+            <h2 class="text-3xl md:text-6xl font-bold tracking-tight mb-16 text-center">{{ __('Projecten') }}</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                @for ($i = 1; $i <= 4; $i++)
+                <div class="rounded-2xl overflow-hidden border border-white/5 bg-white/[0.02] hover:border-white/20 hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
+                    <div class="aspect-[16/10] bg-gradient-to-br from-slate-800 to-slate-900 flex items-center justify-center">
+                        <span class="text-slate-600 text-sm">{{ __('Binnenkort') }}</span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-semibold">{{ __('Project') }} 0{{ $i }}</h3>
+                        <p class="text-xs text-slate-400 mt-1">{{ __('Binnenkort meer informatie over dit project.') }}</p>
+                    </div>
+                </div>
+                @endfor
+            </div>
+        </div>
+    </section>
+
+    {{-- Contact --}}
+    <section id="contact" class="py-28 px-6 bg-slate-900/30">
+        <div class="max-w-3xl mx-auto">
+            <p class="text-sm text-slate-400 mb-4 tracking-widest uppercase text-center">{{ __('Laten we Praten') }}</p>
+            <h2 class="text-3xl md:text-6xl font-bold tracking-tight mb-4 text-center">{{ __('Laten we jouw project bespreken') }}</h2>
+            <div class="flex items-center justify-center gap-2 text-sm text-slate-400 mb-3">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                <span>{{ __('Duurt minder dan 2 minuten') }}</span>
+            </div>
+            <div class="flex flex-wrap justify-center gap-3 mb-10 text-xs text-slate-400">
+                <span class="flex items-center gap-1.5"><svg class="w-3.5 h-3.5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> {{ __('Antwoord binnen 24 uur') }}</span>
+                <span class="flex items-center gap-1.5"><svg class="w-3.5 h-3.5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> {{ __('Vrijblijvende offerte') }}</span>
+                <span class="flex items-center gap-1.5"><svg class="w-3.5 h-3.5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> {{ __('Geen verplichtingen') }}</span>
+            </div>
+
+            <form action="{{ route('contact.store') }}" method="POST" class="max-w-lg mx-auto">
+                @csrf
+                <div class="mb-4">
+                    <input type="text" name="name" placeholder="{{ __('Uw naam') }}" required class="w-full bg-transparent border-b border-white/20 py-3 text-sm outline-none focus:border-blue-400/60 transition-colors placeholder:opacity-30">
+                </div>
+                <div class="mb-4">
+                    <input type="email" name="email" placeholder="{{ __('Uw e-mailadres') }}" required class="w-full bg-transparent border-b border-white/20 py-3 text-sm outline-none focus:border-blue-400/60 transition-colors placeholder:opacity-30">
+                </div>
+                <div class="mb-4">
+                    <input type="tel" name="phone" placeholder="{{ __('Telefoonnummer (optioneel)') }}" class="w-full bg-transparent border-b border-white/20 py-3 text-sm outline-none focus:border-blue-400/60 transition-colors placeholder:opacity-30">
+                </div>
+                <div class="mb-6">
+                    <textarea name="message" rows="4" placeholder="{{ __('Extra toelichting (optioneel)') }}" class="w-full bg-transparent border-b border-white/20 py-3 text-sm outline-none focus:border-blue-400/60 transition-colors placeholder:opacity-30 resize-none"></textarea>
+                </div>
+                <button type="submit" class="w-full px-8 py-3 bg-blue-600 text-white text-sm font-medium rounded-full hover:bg-blue-500 transition-all shadow-lg shadow-blue-500/20">{{ __('Verstuur Bericht') }}</button>
+            </form>
+        </div>
+    </section>
+
+    {{-- Reviews --}}
+    <section id="reviews" class="py-28 px-6">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-lg md:text-2xl font-semibold tracking-tight mb-2 text-center">{{ __('Reviews') }}</h2>
+            <p class="text-sm text-slate-400 mb-8 text-center">{{ __("Ils m'ont fait confiance") }}</p>
+            <div class="grid md:grid-cols-3 gap-4">
+                <div class="rounded-xl border border-white/5 bg-white/[0.02] p-5 text-center hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(59,130,246,0.08)] transition-all">
+                    <div class="flex items-center justify-center gap-0.5 mb-3 text-yellow-500">⭐⭐⭐⭐⭐</div>
+                    <p class="text-xs text-slate-400 leading-relaxed">"Flex Dev heeft mijn website volledig vernieuwd. Professioneel, snel en betrouwbaar."</p>
+                    <p class="text-xs font-medium text-slate-200 mt-3">— Sarah M.</p>
+                </div>
+                <div class="rounded-xl border border-white/5 bg-white/[0.02] p-5 text-center hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(59,130,246,0.08)] transition-all">
+                    <div class="flex items-center justify-center gap-0.5 mb-3 text-yellow-500">⭐⭐⭐⭐⭐</div>
+                    <p class="text-xs text-slate-400 leading-relaxed">"Snelle communicatie en topresultaat. Mijn bedrijfssite werkt nu perfect op alle apparaten."</p>
+                    <p class="text-xs font-medium text-slate-200 mt-3">— Tom V.</p>
+                </div>
+                <div class="rounded-xl border border-white/5 bg-white/[0.02] p-5 text-center hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(59,130,246,0.08)] transition-all">
+                    <div class="flex items-center justify-center gap-0.5 mb-3 text-yellow-500">⭐⭐⭐⭐⭐</div>
+                    <p class="text-xs text-slate-400 leading-relaxed">"Dankzij Flex Dev is mijn website nu eindelijk mobiel-vriendelijk. Echt een aanrader!"</p>
+                    <p class="text-xs font-medium text-slate-200 mt-3">— Lisa K.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Scroll animation for sections
+        const navLinks = document.querySelectorAll('.nav-link');
+        const sections = navLinks.length > 0 ? document.querySelectorAll('section[id]') : [];
+        if (sections.length > 0) {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        navLinks.forEach(link => {
+                            link.classList.remove('text-white', 'bg-white/10');
+                            link.classList.add('text-slate-400');
+                            if (link.dataset.section === entry.target.id) {
+                                link.classList.remove('text-slate-400');
+                                link.classList.add('text-white', 'bg-white/10');
+                            }
+                        });
+                    }
+                });
+            }, { threshold: 0.3 });
+            sections.forEach(s => observer.observe(s));
+        }
+    </script>
 @endsection
