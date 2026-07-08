@@ -62,24 +62,29 @@
         <div class="max-w-6xl mx-auto">
             <p class="text-sm text-slate-400 mb-4 tracking-widest uppercase text-center">{{ __('Wat Ik Doe') }}</p>
             <h2 class="text-3xl md:text-6xl font-bold tracking-tight mb-16 text-center">{{ __('Diensten') }}</h2>
-            <div class="max-w-3xl mx-auto space-y-8">
+            <div class="max-w-5xl mx-auto">
                 @php $services = [
-                    ['nr' => '01', 'title' => __('Webontwikkeling'), 'desc' => __('Moderne, responsive websites en webapplicaties bouwen met Laravel, PHP en Tailwind CSS.')],
-                    ['nr' => '02', 'title' => __('Bugfixing'), 'desc' => __('Problemen opsporen en oplossen in bestaande codebases.')],
-                    ['nr' => '03', 'title' => __('Prestatieoptimalisatie'), 'desc' => __('Trage applicaties versnellen en gebruikerservaring verbeteren.')],
-                    ['nr' => '04', 'title' => __('SEO Optimalisatie'), 'desc' => __('Je website beter vindbaar maken in Google.')],
-                    ['nr' => '05', 'title' => __('Onderhoud & Support'), 'desc' => __('Maandelijks beheer, updates, back-ups en veiligheid.')],
-                    ['nr' => '06', 'title' => __('Responsive Fix'), 'desc' => __('Bestaande sites mobiel-vriendelijk maken.')],
+                    ['nr' => '01', 'title' => __('Webontwikkeling'), 'desc' => __('Moderne, responsive websites en webapplicaties bouwen met Laravel, PHP en Tailwind CSS.'), 'img' => 'https://images.unsplash.com/photo-1520085601670-ee14aa5fa3e8?w=600&h=400&fit=crop&auto=format'],
+                    ['nr' => '02', 'title' => __('Bugfixing'), 'desc' => __('Problemen opsporen en oplossen in bestaande codebases.'), 'img' => 'https://images.unsplash.com/photo-1489875347897-49f64b51c1f8?w=600&h=400&fit=crop&auto=format'],
+                    ['nr' => '03', 'title' => __('Prestatieoptimalisatie'), 'desc' => __('Trage applicaties versnellen en gebruikerservaring verbeteren.'), 'img' => 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop&auto=format'],
+                    ['nr' => '04', 'title' => __('SEO Optimalisatie'), 'desc' => __('Je website beter vindbaar maken in Google.'), 'img' => 'https://images.unsplash.com/photo-1579532537598-459ecdaf39cc?w=600&h=400&fit=crop&auto=format'],
+                    ['nr' => '05', 'title' => __('Onderhoud & Support'), 'desc' => __('Maandelijks beheer, updates, back-ups en veiligheid.'), 'img' => 'https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?w=600&h=400&fit=crop&auto=format'],
+                    ['nr' => '06', 'title' => __('Responsive Fix'), 'desc' => __('Bestaande sites mobiel-vriendelijk maken.'), 'img' => 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&h=400&fit=crop&auto=format'],
                 ]; @endphp
+                <div class="grid md:grid-cols-2 gap-6">
                 @foreach ($services as $svc)
-                <div class="flex items-start gap-4 rounded-2xl border border-white/5 bg-white/[0.02] p-6 hover:border-blue-500/20 hover:shadow-[0_0_30px_rgba(59,130,246,0.06)] transition-all">
-                    <span class="text-lg font-bold text-blue-400/60 shrink-0 w-8">{{ $svc['nr'] }}</span>
-                    <div>
-                        <h3 class="text-lg font-semibold">{{ $svc['title'] }}</h3>
-                        <p class="text-sm text-slate-400 mt-1">{{ $svc['desc'] }}</p>
+                <div class="rounded-xl overflow-hidden border border-white/10 hover:-translate-y-1 hover:shadow-[0_0_40px_rgba(59,130,246,0.15)] transition-all duration-300">
+                    <div class="aspect-[16/9] overflow-hidden bg-slate-800">
+                        <img src="{{ $svc['img'] }}" alt="{{ $svc['title'] }}" class="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity duration-500" loading="lazy">
+                    </div>
+                    <div class="p-5">
+                        <span class="text-xs font-bold text-blue-400/60">{{ $svc['nr'] }}</span>
+                        <h3 class="text-base font-semibold mt-1">{{ $svc['title'] }}</h3>
+                        <p class="text-xs text-slate-400 mt-1">{{ $svc['desc'] }}</p>
                     </div>
                 </div>
                 @endforeach
+                </div>
             </div>
         </div>
     </section>
@@ -164,17 +169,23 @@
             <p class="text-sm text-slate-400 mb-4 tracking-widest uppercase text-center">{{ __('Uitgelicht Werk') }}</p>
             <h2 class="text-3xl md:text-6xl font-bold tracking-tight mb-16 text-center">{{ __('Projecten') }}</h2>
             <div class="grid md:grid-cols-2 gap-6">
-                @for ($i = 1; $i <= 4; $i++)
-                <div class="rounded-2xl overflow-hidden border border-white/5 bg-white/[0.02] hover:border-white/20 hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
-                    <div class="aspect-[16/10] bg-gradient-to-br from-slate-800 to-slate-900 flex items-center justify-center">
-                        <span class="text-slate-600 text-sm">{{ __('Binnenkort') }}</span>
+                @php $projects = [
+                    ['img' => 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&h=400&fit=crop&auto=format'],
+                    ['img' => 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop&auto=format'],
+                    ['img' => 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=400&fit=crop&auto=format'],
+                    ['img' => 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&h=400&fit=crop&auto=format'],
+                ]; @endphp
+                @foreach ($projects as $i => $p)
+                <div class="rounded-2xl overflow-hidden border border-white/5 hover:border-white/20 hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
+                    <div class="aspect-[16/10] overflow-hidden bg-slate-800">
+                        <img src="{{ $p['img'] }}" alt="Project" class="w-full h-full object-cover opacity-60 hover:opacity-90 transition-opacity duration-500" loading="lazy">
                     </div>
                     <div class="p-5">
-                        <h3 class="font-semibold">{{ __('Project') }} 0{{ $i }}</h3>
+                        <h3 class="font-semibold">{{ __('Project') }} 0{{ $i + 1 }}</h3>
                         <p class="text-xs text-slate-400 mt-1">{{ __('Binnenkort meer informatie over dit project.') }}</p>
                     </div>
                 </div>
-                @endfor
+                @endforeach
             </div>
         </div>
     </section>
