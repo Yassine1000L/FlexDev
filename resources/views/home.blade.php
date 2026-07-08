@@ -25,7 +25,7 @@
     </section>
 
     {{-- Over --}}
-    <section id="over" class="py-28 px-6">
+    <section id="over" class="py-28 px-6 animate">
         <div class="max-w-4xl mx-auto">
             <p class="text-sm text-slate-400 mb-4 tracking-widest uppercase text-center">{{ __('Wat Ik Doe') }}</p>
             <h2 class="text-3xl md:text-6xl font-bold tracking-tight mb-8 text-center">{{ __('Over Flex Dev') }}</h2>
@@ -58,7 +58,7 @@
     </section>
 
     {{-- Diensten --}}
-    <section id="diensten" class="py-28 px-6">
+    <section id="diensten" class="py-28 px-6 animate">
         <div class="max-w-6xl mx-auto">
             <p class="text-sm text-slate-400 mb-4 tracking-widest uppercase text-center">{{ __('Wat Ik Doe') }}</p>
             <h2 class="text-3xl md:text-6xl font-bold tracking-tight mb-16 text-center">{{ __('Diensten') }}</h2>
@@ -90,7 +90,7 @@
     </section>
 
     {{-- Waarom --}}
-    <section id="waarom" class="py-28 px-6">
+    <section id="waarom" class="py-28 px-6 animate">
         <div class="max-w-5xl mx-auto">
             <p class="text-sm text-slate-400 mb-4 tracking-widest uppercase text-center">{{ __('Pourquoi') }}</p>
             <h2 class="text-3xl md:text-5xl font-bold tracking-tight mb-4 text-center">{{ __('Waarom Flex Dev') }} ?</h2>
@@ -131,7 +131,7 @@
     </section>
 
     {{-- Proces --}}
-    <section id="proces" class="py-28 px-6 relative overflow-hidden">
+    <section id="proces" class="py-28 px-6 relative overflow-hidden animate">
         <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] rounded-full bg-blue-500/5 blur-[120px] pointer-events-none"></div>
         <div class="max-w-4xl mx-auto relative z-10">
             <p class="text-sm text-slate-400 mb-4 tracking-widest uppercase text-center">{{ __('Werkwijze') }}</p>
@@ -164,7 +164,7 @@
     </section>
 
     {{-- Projecten --}}
-    <section id="projecten" class="py-28 px-6">
+    <section id="projecten" class="py-28 px-6 animate">
         <div class="max-w-5xl mx-auto">
             <p class="text-sm text-slate-400 mb-4 tracking-widest uppercase text-center">{{ __('Uitgelicht Werk') }}</p>
             <h2 class="text-3xl md:text-6xl font-bold tracking-tight mb-16 text-center">{{ __('Projecten') }}</h2>
@@ -191,7 +191,7 @@
     </section>
 
     {{-- Contact --}}
-    <section id="contact" class="py-28 px-6">
+    <section id="contact" class="py-28 px-6 animate">
         <div class="max-w-3xl mx-auto">
             <p class="text-sm text-slate-400 mb-4 tracking-widest uppercase text-center">{{ __('Laten we Praten') }}</p>
             <h2 class="text-3xl md:text-6xl font-bold tracking-tight mb-4 text-center">{{ __('Laten we jouw project bespreken') }}</h2>
@@ -225,7 +225,7 @@
     </section>
 
     {{-- Reviews --}}
-    <section id="reviews" class="py-28 px-6">
+    <section id="reviews" class="py-28 px-6 animate">
         <div class="max-w-3xl mx-auto">
             <h2 class="text-lg md:text-2xl font-semibold tracking-tight mb-2 text-center">{{ __('Reviews') }}</h2>
             <p class="text-sm text-slate-400 mb-8 text-center">{{ __("Ils m'ont fait confiance") }}</p>
