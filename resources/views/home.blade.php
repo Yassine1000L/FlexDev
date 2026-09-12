@@ -249,31 +249,6 @@
         </div>
     </section>
 
-    {{-- Reviews --}}
-    <section id="reviews" class="py-28 px-6 animate">
-        <div class="max-w-3xl mx-auto">
-            <h2 class="text-lg md:text-2xl font-semibold tracking-tight mb-2 text-center">{{ __('Reviews') }}</h2>
-            <p class="text-sm text-slate-400 mb-8 text-center">{{ __("Ils m'ont fait confiance") }}</p>
-            <div class="grid md:grid-cols-3 gap-4">
-                <div class="rounded-xl border border-white/5 bg-white/[0.02] p-5 text-center hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(34,197,94,0.08)] transition-all">
-                    <div class="flex items-center justify-center gap-0.5 mb-3 text-yellow-500">⭐⭐⭐⭐⭐</div>
-                    <p class="text-xs text-slate-400 leading-relaxed">"{{ __('Flex Dev heeft mijn website volledig vernieuwd. Professioneel, snel en betrouwbaar.') }}"</p>
-                    <p class="text-xs font-medium text-slate-200 mt-3">— Sarah M.</p>
-                </div>
-                <div class="rounded-xl border border-white/5 bg-white/[0.02] p-5 text-center hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(34,197,94,0.08)] transition-all">
-                    <div class="flex items-center justify-center gap-0.5 mb-3 text-yellow-500">⭐⭐⭐⭐⭐</div>
-                    <p class="text-xs text-slate-400 leading-relaxed">"{{ __('Snelle communicatie en topresultaat. Mijn bedrijfssite werkt nu perfect op alle apparaten.') }}"</p>
-                    <p class="text-xs font-medium text-slate-200 mt-3">— Tom V.</p>
-                </div>
-                <div class="rounded-xl border border-white/5 bg-white/[0.02] p-5 text-center hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(34,197,94,0.08)] transition-all">
-                    <div class="flex items-center justify-center gap-0.5 mb-3 text-yellow-500">⭐⭐⭐⭐⭐</div>
-                    <p class="text-xs text-slate-400 leading-relaxed">"{{ __('Dankzij Flex Dev is mijn website nu eindelijk mobiel-vriendelijk. Echt een aanrader!') }}"</p>
-                    <p class="text-xs font-medium text-slate-200 mt-3">— Lisa K.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <script>
         // Scroll animation for sections
         const navLinks = document.querySelectorAll('.nav-link');
