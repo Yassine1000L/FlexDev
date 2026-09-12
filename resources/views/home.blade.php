@@ -132,33 +132,44 @@
 
     {{-- Proces --}}
     <section id="proces" class="py-28 px-6 relative overflow-hidden animate">
-        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] rounded-full bg-green-500/5 blur-[120px] pointer-events-none"></div>
-        <div class="max-w-4xl mx-auto relative z-10">
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[700px] h-[700px] rounded-full bg-green-500/5 blur-[140px] pointer-events-none"></div>
+        <div class="max-w-5xl mx-auto relative z-10">
             <p class="text-sm text-slate-400 mb-4 tracking-widest uppercase text-center">{{ __('Werkwijze') }}</p>
-            <h2 class="text-3xl md:text-5xl font-bold tracking-tight mb-16 text-center">{{ __('Comment se déroule votre projet') }}?</h2>
+            <h2 class="text-3xl md:text-5xl font-bold tracking-tight mb-4 text-center">{{ __('Hoe verloopt jouw project?') }}</h2>
+            <p class="text-sm text-slate-400 max-w-xl mx-auto text-center mb-20">{{ __('Van het eerste gesprek tot de oplevering, stap voor stap.') }}</p>
+
             @php $steps = [
-                ['nr' => '01', 'icon' => '📞', 'title' => __('Premier contact'), 'desc' => __('Nous discutons de vos besoins et objectifs.')],
-                ['nr' => '02', 'icon' => '📋', 'title' => __('Analyse'), 'desc' => __('Je prépare une proposition détaillée avec planning et budget.')],
-                ['nr' => '03', 'icon' => '💻', 'title' => __('Développement'), 'desc' => __('Je développe votre projet en phases, avec des retours réguliers.')],
-                ['nr' => '04', 'icon' => '🚀', 'title' => __('Mise en ligne'), 'desc' => __('Votre site est publié et prêt à être utilisé.')],
-                ['nr' => '05', 'icon' => '🛠', 'title' => __('Support'), 'desc' => __('Je reste disponible pour toute question ou amélioration.')],
+                ['nr' => '01', 'icon' => '📞', 'title' => __('Eerste contact'), 'desc' => __('We bespreken jouw wensen en doelen.')],
+                ['nr' => '02', 'icon' => '📋', 'title' => __('Analyse & Offerte'), 'desc' => __('Ik stel een duidelijk plan op met planning en budget.')],
+                ['nr' => '03', 'icon' => '💻', 'title' => __('Ontwikkeling'), 'desc' => __('Ik bouw je project in fases, met regelmatige updates.')],
+                ['nr' => '04', 'icon' => '🚀', 'title' => __('Oplevering'), 'desc' => __('Je website wordt gepubliceerd en is klaar voor gebruik.')],
+                ['nr' => '05', 'icon' => '🛠', 'title' => __('Support & nazorg'), 'desc' => __('Na oplevering sta ik klaar voor vragen en verbeteringen.')],
             ]; @endphp
-            <div class="flex flex-col items-center">
-                @foreach ($steps as $i => $step)
-                <div class="flex items-center gap-4 w-full max-w-lg mb-6">
-                    <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-green-500 to-green-600 flex items-center justify-center shadow-lg shadow-green-500/20 shrink-0">
-                        <span class="text-lg">{{ $step['icon'] }}</span>
+
+            <div class="relative">
+                <div class="absolute left-6 md:left-1/2 top-6 bottom-6 -translate-x-1/2 w-px bg-gradient-to-b from-green-500/0 via-green-500/40 to-green-500/0"></div>
+
+                <div class="space-y-12">
+                    @foreach ($steps as $i => $step)
+                    <div class="relative md:flex {{ $i % 2 === 0 ? 'md:justify-start' : 'md:justify-end' }} pl-16 md:pl-0">
+                        <div class="absolute left-6 md:left-1/2 -translate-x-1/2 top-6 z-10">
+                            <div class="relative w-12 h-12 rounded-2xl bg-gradient-to-br from-green-500 to-green-600 flex items-center justify-center shadow-lg shadow-green-500/40 ring-4 ring-green-500/10">
+                                <span class="absolute -inset-1 rounded-2xl bg-green-500/20 blur-md animate-pulse"></span>
+                                <span class="relative text-xl">{{ $step['icon'] }}</span>
+                            </div>
+                        </div>
+                        <div class="group relative md:w-[calc(50%-3rem)] bg-white/[0.02] border border-white/10 rounded-2xl p-6 backdrop-blur-sm hover:border-green-400/40 hover:bg-white/[0.04] hover:-translate-y-1 hover:shadow-[0_0_40px_rgba(34,197,94,0.15)] transition-all duration-500 overflow-hidden">
+                            <span class="absolute -top-6 -right-2 text-8xl font-black text-white/[0.04] select-none pointer-events-none group-hover:text-white/[0.07] transition-colors duration-500">{{ $step['nr'] }}</span>
+                            <span class="inline-flex items-center gap-2 mb-3">
+                                <svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                                <span class="text-xs font-semibold text-green-400/80 tracking-[0.2em] uppercase">{{ __('Stap') }} {{ $step['nr'] }}</span>
+                            </span>
+                            <h3 class="text-base font-semibold mb-1">{{ $step['title'] }}</h3>
+                            <p class="text-xs text-slate-400 leading-relaxed">{{ $step['desc'] }}</p>
+                        </div>
                     </div>
-                    <div class="flex-1">
-                        <span class="text-xs text-green-400/60 font-medium">{{ $step['nr'] }}</span>
-                        <h3 class="text-base font-semibold">{{ $step['title'] }}</h3>
-                        <p class="text-xs text-slate-400">{{ $step['desc'] }}</p>
-                    </div>
+                    @endforeach
                 </div>
-                @if (!$loop->last)
-                <div class="w-px h-6 border-l border-dashed border-green-400/30 mb-6"></div>
-                @endif
-                @endforeach
             </div>
         </div>
     </section>
