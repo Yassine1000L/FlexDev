@@ -40,7 +40,7 @@
                 </div>
                 <div class="rounded-xl border border-green-500/10 bg-green-500/5 p-5 text-center hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(34,197,94,0.12)] transition-all duration-300">
                     <svg class="w-6 h-6 mx-auto mb-2 text-green-400/60" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                    <span class="text-2xl font-bold text-green-400">3+</span>
+                    <span class="text-2xl font-bold text-green-400">2</span>
                     <p class="text-xs text-slate-400 mt-1">{{ __('Jaar ervaring') }}</p>
                 </div>
                 <div class="rounded-xl border border-green-500/10 bg-green-500/5 p-5 text-center hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(34,197,94,0.12)] transition-all duration-300">
