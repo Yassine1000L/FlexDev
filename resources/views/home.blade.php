@@ -19,7 +19,6 @@
             </p>
             <div class="mt-10 flex flex-col sm:flex-row gap-4">
                 <a href="#contact" class="inline-flex items-center px-8 py-3 bg-green-600 text-white text-sm font-medium rounded-full hover:bg-green-500 transition-all shadow-lg shadow-green-500/20">{{ __('Vraag gratis offerte aan') }}</a>
-                <a href="#projecten" class="inline-flex items-center px-8 py-3 border border-green-500/30 text-sm font-medium rounded-full hover:border-green-400/60 hover:bg-green-500/5 transition-all">{{ __('Bekijk mijn werk') }}</a>
             </div>
         </div>
     </section>
@@ -170,33 +169,6 @@
                     </div>
                     @endforeach
                 </div>
-            </div>
-        </div>
-    </section>
-
-    {{-- Projecten --}}
-    <section id="projecten" class="py-28 px-6 animate">
-        <div class="max-w-5xl mx-auto">
-            <p class="text-sm text-slate-400 mb-4 tracking-widest uppercase text-center">{{ __('Uitgelicht Werk') }}</p>
-            <h2 class="text-3xl md:text-6xl font-bold tracking-tight mb-16 text-center">{{ __('Projecten') }}</h2>
-            <div class="grid md:grid-cols-2 gap-6">
-                @php $projects = [
-                    ['img' => 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&h=400&fit=crop&auto=format'],
-                    ['img' => 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop&auto=format'],
-                    ['img' => 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=400&fit=crop&auto=format'],
-                    ['img' => 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&h=400&fit=crop&auto=format'],
-                ]; @endphp
-                @foreach ($projects as $i => $p)
-                <div class="rounded-2xl overflow-hidden border border-white/5 hover:border-white/20 hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
-                    <div class="aspect-[16/10] overflow-hidden bg-slate-800">
-                        <img src="{{ $p['img'] }}" alt="{{ __('Project') }}" class="w-full h-full object-cover opacity-60 hover:opacity-90 transition-opacity duration-500" loading="lazy">
-                    </div>
-                    <div class="p-5">
-                        <h3 class="font-semibold">{{ __('Project') }} 0{{ $i + 1 }}</h3>
-                        <p class="text-xs text-slate-400 mt-1">{{ __('Binnenkort meer informatie over dit project.') }}</p>
-                    </div>
-                </div>
-                @endforeach
             </div>
         </div>
     </section>
