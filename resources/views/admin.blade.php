@@ -1,30 +1,30 @@
 @extends('layouts.app')
 
-@section('title', 'Berichten | Flex Dev')
+@section('title', __('Berichten') . ' | Flex Dev')
 
 @section('content')
     <section class="min-h-screen px-6 pt-28 pb-20">
         <div class="max-w-4xl mx-auto w-full">
             <div class="flex items-center justify-between mb-2">
-                <h2 class="text-3xl font-bold tracking-tight">Berichten</h2>
-                <a href="{{ route('home') }}" class="text-sm text-slate-400 hover:opacity-70 transition-opacity">&larr; Site</a>
+                <h2 class="text-3xl font-bold tracking-tight">{{ __('Berichten') }}</h2>
+                <a href="{{ route('home') }}" class="text-sm text-slate-400 hover:opacity-70 transition-opacity">&larr; {{ __('Site') }}</a>
             </div>
-            <p class="text-sm text-slate-400 mb-10">{{ $messages->count() }} bericht(en) ontvangen.</p>
+            <p class="text-sm text-slate-400 mb-10">{{ $messages->count() }} {{ __('bericht(en) ontvangen.') }}</p>
 
             @if ($messages->isEmpty())
-                <p class="text-sm text-slate-500">Nog geen berichten ontvangen.</p>
+                <p class="text-sm text-slate-500">{{ __('Nog geen berichten ontvangen.') }}</p>
             @else
                 <div class="space-y-4">
                     @foreach ($messages as $msg)
                         @php
                             $labelMap = [
-                                'q_project_type' => 'Type project',
-                                'q_design' => 'Ontwerp',
-                                'q_what_change' => 'Aanpassing',
-                                'q_has_site' => 'Bestaande site',
-                                'q_bug_location' => 'Probleem locatie',
-                                'q_urgency' => 'Urgentie',
-                                'q_optimize_what' => 'Optimalisatie',
+                                'q_project_type' => __('Type project'),
+                                'q_design' => __('Ontwerp'),
+                                'q_what_change' => __('Aanpassing'),
+                                'q_has_site' => __('Bestaande site'),
+                                'q_bug_location' => __('Probleem locatie'),
+                                'q_urgency' => __('Urgentie'),
+                                'q_optimize_what' => __('Optimalisatie'),
                             ];
                             $details = is_string($msg->details) ? json_decode($msg->details, true) : $msg->details;
                         @endphp
@@ -39,7 +39,7 @@
 
                             <div class="border-t border-white/10 pt-4 space-y-2 text-sm">
                                 <div class="flex">
-                                    <span class="w-32 text-slate-400 shrink-0">Dienst</span>
+                                    <span class="w-32 text-slate-400 shrink-0">{{ __('Dienst') }}</span>
                                     <span>{{ $msg->service }}</span>
                                 </div>
 
@@ -54,28 +54,28 @@
 
                                 @if ($msg->phone)
                                     <div class="flex">
-                                        <span class="w-32 text-slate-400 shrink-0">Telefoon</span>
+                                        <span class="w-32 text-slate-400 shrink-0">{{ __('Telefoon') }}</span>
                                         <span>{{ $msg->phone }}</span>
                                     </div>
                                 @endif
 
                                 @if ($msg->company)
                                     <div class="flex">
-                                        <span class="w-32 text-slate-400 shrink-0">Bedrijf</span>
+                                        <span class="w-32 text-slate-400 shrink-0">{{ __('Bedrijf') }}</span>
                                         <span>{{ $msg->company }}</span>
                                     </div>
                                 @endif
 
                                 @if ($msg->preference)
                                     <div class="flex">
-                                        <span class="w-32 text-slate-400 shrink-0">Contact voorkeur</span>
+                                        <span class="w-32 text-slate-400 shrink-0">{{ __('Contact voorkeur') }}</span>
                                         <span>{{ $msg->preference }}</span>
                                     </div>
                                 @endif
 
                                 @if ($msg->message)
                                     <div class="pt-3 mt-3 border-t border-white/5">
-                                        <span class="block text-xs text-slate-400 mb-1">Extra toelichting</span>
+                                        <span class="block text-xs text-slate-400 mb-1">{{ __('Extra toelichting') }}</span>
                                         <p class="opacity-70 leading-relaxed">{{ $msg->message }}</p>
                                     </div>
                                 @endif
